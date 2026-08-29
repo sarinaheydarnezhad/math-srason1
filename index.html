@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>مسترکلاس ریاضی: پایه‌های محاسباتی</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
   :root{
     --bg:#FAF6EC;
@@ -36,7 +36,7 @@
   }
   .wrap{max-width:1000px;margin:0 auto;padding:18px 20px 80px;}
 
-  code, .mono{font-family:'JetBrains Mono',monospace;}
+  code, .mono{font-family:'Vazirmatn',sans-serif;}
 
   /* ===== NAV ===== */
   .topnav{
@@ -160,14 +160,14 @@
 
   /* formula highlight box */
   .formula{
-    text-align:center;font-family:'JetBrains Mono',monospace;font-size:17px;font-weight:700;
+    text-align:center;font-family:'Vazirmatn',sans-serif;font-size:17px;font-weight:700;
     background:var(--navy);color:#fff;border-radius:14px;padding:16px;margin:14px 0;
     letter-spacing:.5px;
   }
   .frac{display:inline-flex;flex-direction:column;text-align:center;vertical-align:middle;margin:0 3px;font-size:14px;}
   .frac span{display:block;padding:0 4px;}
   .frac .num{border-bottom:1.6px solid currentColor;}
-  .ltr{direction:ltr;unicode-bidi:embed;display:inline-flex;align-items:center;gap:4px;font-family:'JetBrains Mono',monospace;}
+  .ltr{direction:ltr;unicode-bidi:embed;display:inline-flex;align-items:center;gap:4px;font-family:'Vazirmatn',sans-serif;}
   .quick-check{
     margin-top:12px;background:#fff;border:1px dashed #b7ddc7;border-radius:10px;padding:10px 14px;
   }
@@ -243,15 +243,15 @@
 <nav class="topnav">
   <a href="#howto">راهنمای استفاده</a>
   <a href="#s1">۱. معماری اعداد</a>
-  <a href="#s2">۲. مقایسه و تخمین</a>
-  <a href="#s3">۳. عوامل و مضرب‌ها</a>
-  <a href="#s4">۴. قوانین توان</a>
-  <a href="#s5">۵. رادیکال‌ها</a>
-  <a href="#s6">۶. درصد</a>
-  <a href="#s7">۷. ترتیب عملیات</a>
-  <a href="#s8">۸. جملات هم‌نوع</a>
-  <a href="#s9">۹. اتحادها</a>
-  <a href="#s10">۱۰. اعشار و نمایش علمی</a>
+  <a href="#s10">۲. اعشار و نمایش علمی</a>
+  <a href="#s2">۳. مقایسه و تخمین</a>
+  <a href="#s3">۴. عوامل و مضرب‌ها</a>
+  <a href="#s4">۵. قوانین توان</a>
+  <a href="#s5">۶. رادیکال‌ها</a>
+  <a href="#s6">۷. درصد</a>
+  <a href="#s7">۸. ترتیب عملیات</a>
+  <a href="#s8">۹. جملات هم‌نوع</a>
+  <a href="#s9">۱۰. اتحادها</a>
   <a href="#s11">۱۱. بخش‌پذیری</a>
   <a href="#summary">جمع‌بندی</a>
 </nav>
@@ -425,12 +425,167 @@
       </div>
     </div>
   </section>
+  <!-- ===================== SECTION 10 : اعداد اعشاری و نمایش علمی ===================== -->
+  <section class="section" id="s10">
+    <div class="sec-head">
+      <div class="sec-num" style="background:var(--teal);">۲</div>
+      <div><span class="kicker">بخش دوم</span><h2>اعداد اعشاری و نمایش علمی (Scientific Notation)</h2></div>
+    </div>
+
+    <div class="card concept">
+      <span class="card-label">مفاهیم اصلی</span>
+      <h3>سه نوع عدد اعشاری (Decimal Number)</h3>
+      <table>
+        <tr><th>نوع</th><th>تعریف</th><th>مثال</th><th>گویا/گنگ</th></tr>
+        <tr><td>پایان‌پذیر<br><span style="font-size:11.5px;color:var(--sub);">Terminal Decimal</span></td><td>اعشار در جایی تمام می‌شود</td><td class="ltr">۱٫۲ &nbsp;،&nbsp; ۰٫۱۲۵</td><td>گویا</td></tr>
+        <tr><td>متناوب<br><span style="font-size:11.5px;color:var(--sub);">Repeating Decimal</span></td><td>یک الگو تا بی‌نهایت تکرار می‌شود</td><td class="ltr">۰٫۳۳۳...</td><td>گویا</td></tr>
+        <tr><td>غیرمتناوب<br><span style="font-size:11.5px;color:var(--sub);">Non-repeating Infinite Decimal</span></td><td>بی‌نهایت رقم، بدون هیچ الگویی</td><td class="ltr">π = ۳٫۱۴۱۵۹۲...</td><td>گنگ</td></tr>
+      </table>
+      <p>راز تشخیص سریع نوع اول (پایان‌پذیر) بدون نیاز به تقسیم: کسر را ساده کن و مخرج را تجزیه کن — اگر مخرج <b>فقط</b> از عامل‌های ۲ و ۵ ساخته شده باشد، اعشار پایان‌پذیر است؛ در غیر این‌صورت متناوب می‌شود.</p>
+      <p style="font-size:13.5px;color:var(--sub);">این دقیقاً همان تقسیم اقلیدسی است که در بخش تقسیم دیدیم: a = b×q + r با ۰≤r&lt;b؛ اگر باقیمانده هرگز صفر نشود و الگویش تکرار شود، اعشار متناوب می‌سازد.</p>
+    </div>
+
+    <div class="grid3">
+      <div class="card example">
+        <span class="card-label">مثال ۱ — پایان‌پذیر</span>
+        <h3 class="ltr" style="justify-content:flex-start;"><span class="frac"><span class="num">۳</span><span class="den">۲۰</span></span></h3>
+        <div class="steps">
+          <div>۲۰ = ۲² × ۵ → فقط عامل‌های ۲ و ۵</div>
+          <div class="ltr"><span class="frac"><span class="num">۳</span><span class="den">۲۰</span></span> = <span class="frac"><span class="num">۱۵</span><span class="den">۱۰۰</span></span></div>
+        </div>
+        <div class="result ltr">نتیجه: ۰٫۱۵ (پایان‌پذیر)</div>
+      </div>
+      <div class="card example">
+        <span class="card-label">مثال ۲ — متناوب</span>
+        <h3 class="ltr" style="justify-content:flex-start;"><span class="frac"><span class="num">۲</span><span class="den">۹</span></span></h3>
+        <div class="steps">
+          <div>۹ = ۳² → عامل ۳ دارد، نه فقط ۲ و ۵</div>
+          <div>تقسیم طولانی هرگز باقیماندهٔ صفر نمی‌دهد و رقم ۲ تکرار می‌شود</div>
+        </div>
+        <div class="result ltr">نتیجه: ۰٫۲۲۲... (متناوب)</div>
+      </div>
+      <div class="card example">
+        <span class="card-label">مثال ۳ — پایان‌پذیر</span>
+        <h3 class="ltr" style="justify-content:flex-start;"><span class="frac"><span class="num">۷</span><span class="den">۸</span></span></h3>
+        <div class="steps">
+          <div>۸ = ۲³ → فقط عامل ۲</div>
+          <div class="ltr"><span class="frac"><span class="num">۷</span><span class="den">۸</span></span> = <span class="frac"><span class="num">۸۷۵</span><span class="den">۱۰۰۰</span></span></div>
+        </div>
+        <div class="result ltr">نتیجه: ۰٫۸۷۵ (پایان‌پذیر)</div>
+      </div>
+    </div>
+
+    <div class="card mistake">
+      <span class="card-label">اشتباهات پرتکرار</span>
+      <ul>
+        <li>فکر نکن هر عدد با رقم‌های اعشاری زیاد، گنگ است — تعیین‌کننده «الگو داشتن» است، نه «طول».</li>
+        <li>در تشخیص سریع، فقط مخرجِ کسرِ <b>ساده‌شده</b> را تجزیه کن، نه مخرج اولیه (اگر کسر ساده نشده باشد جواب اشتباه می‌شود).</li>
+      </ul>
+    </div>
+
+    <div class="card examtip">
+      <span class="card-label">نکات امتحانی</span>
+      <ul>
+        <li>قبل از هر تقسیم طولانی، اول با تجزیهٔ مخرج، نوع اعشار را حدس بزن تا وقت هدر ندهی.</li>
+        <li>اعشار متناوب همیشه گویاست، چون همیشه قابل نوشتن به‌شکل کسر است.</li>
+      </ul>
+    </div>
+
+    <div class="card concept">
+      <span class="card-label">مفاهیم اصلی</span>
+      <h3>نمایش علمی اعداد (Scientific Notation)</h3>
+      <p>برای نوشتن اعداد خیلی بزرگ یا خیلی کوچک به شکل فشرده استفاده می‌شود:</p>
+      <div class="formula ltr" style="justify-content:center;">a × 10ⁿ <span style="font-size:12px;">(۱ ≤ a &lt; ۱۰)</span></div>
+      <p>اگر ممیز را به چپ ببری تا فقط یک رقم غیرصفر قبلش بماند، تعداد جابه‌جایی‌ها توان <b>مثبت</b> می‌شود؛ اگر به راست ببری (برای اعداد کوچک‌تر از ۱)، توان <b>منفی</b> می‌شود.</p>
+    </div>
+    <div class="grid3">
+      <div class="card example">
+        <span class="card-label">مثال ۴</span>
+        <h3 class="ltr" style="justify-content:flex-start;">۵۰۰</h3>
+        <div class="steps"><div>ممیز را ۲ رقم به چپ می‌بریم: ۵٫۰۰</div></div>
+        <div class="result ltr">نتیجه: ۵ × ۱۰²</div>
+      </div>
+      <div class="card example">
+        <span class="card-label">مثال ۵</span>
+        <h3 class="ltr" style="justify-content:flex-start;">۰٫۰۰۰۲۵</h3>
+        <div class="steps"><div>ممیز را ۴ رقم به راست می‌بریم تا برسد به ۲٫۵</div></div>
+        <div class="result ltr">نتیجه: ۲٫۵ × ۱۰⁻⁴</div>
+      </div>
+      <div class="card example">
+        <span class="card-label">مثال ۶</span>
+        <h3 class="ltr" style="justify-content:flex-start;">۳۵۶۷۸۹۳</h3>
+        <div class="steps"><div>ممیز را ۶ رقم به چپ می‌بریم تا برسد به ۳٫۵۶۷۸۹۳</div></div>
+        <div class="result ltr">نتیجه: ۳٫۵۶۷۸۹۳ × ۱۰⁶</div>
+      </div>
+    </div>
+    <div class="grid2">
+      <div class="card example">
+        <span class="card-label">مثال ۷ — بازگشت به فرم عادی</span>
+        <h3 class="ltr" style="justify-content:flex-start;">۳٫۴ × ۱۰⁻⁴</h3>
+        <div class="steps"><div>توان منفی ۴ یعنی ممیز ۴ رقم به چپ (عدد کوچک می‌شود)</div></div>
+        <div class="result ltr">نتیجه: ۰٫۰۰۰۳۴</div>
+      </div>
+      <div class="card example">
+        <span class="card-label">مثال ۸ — بازگشت به فرم عادی</span>
+        <h3 class="ltr" style="justify-content:flex-start;">۳٫۴ × ۱۰⁺⁴</h3>
+        <div class="steps"><div>توان مثبت ۴ یعنی ممیز ۴ رقم به راست (عدد بزرگ می‌شود)</div></div>
+        <div class="result ltr">نتیجه: ۳۴٬۰۰۰</div>
+      </div>
+    </div>
+
+    <div class="card mistake">
+      <span class="card-label">اشتباهات پرتکرار</span>
+      <ul>
+        <li>a باید همیشه بین ۱ و ۱۰ باشد (۱≤a&lt;۱۰)؛ نوشتن ۲۵×۱۰³ به‌جای ۲٫۵×۱۰⁴ اشتباه است.</li>
+        <li>جهت توان را قاطی نکن: عدد بزرگ‌تر از ۱۰ → توان مثبت؛ عدد کوچک‌تر از ۱ → توان منفی.</li>
+      </ul>
+    </div>
+
+    <div class="card examtip">
+      <span class="card-label">نکات امتحانی</span>
+      <ul>
+        <li>توان = تعداد خانه‌هایی که ممیز جابه‌جا شده؛ فقط جهتش را با علامت درست کن.</li>
+        <li>برای اعداد منفی، فقط علامت منفی جلوی a می‌آید و روی محاسبهٔ توان اثری ندارد.</li>
+      </ul>
+    </div>
+
+    <div class="card practice">
+      <span class="card-label">تمرین این بخش</span>
+      <div class="qitem">
+        <b class="qnum">۱</b><span class="ltr"><span class="frac"><span class="num">۵</span><span class="den">۱۶</span></span></span> پایان‌پذیر است یا متناوب؟
+        <details><summary>نمایش پاسخ</summary>
+          <div class="answer">
+            <div class="line">۱۶ = ۲⁴ → فقط عامل ۲</div>
+            <div class="line final">پاسخ نهایی: پایان‌پذیر (۰٫۳۱۲۵)</div>
+          </div>
+        </details>
+      </div>
+      <div class="qitem">
+        <b class="qnum">۲</b>عدد ۰٫۰۰۰۰۷۸ را به نمایش علمی تبدیل کن.
+        <details><summary>نمایش پاسخ</summary>
+          <div class="answer">
+            <div class="line">ممیز را ۵ رقم به راست می‌بریم تا برسد به ۷٫۸</div>
+            <div class="line final ltr">پاسخ نهایی: ۷٫۸ × ۱۰⁻⁵</div>
+          </div>
+        </details>
+      </div>
+      <div class="qitem">
+        <b class="qnum">۳</b>عدد ۲٫۱ × ۱۰⁵ را به فرم عادی بنویس.
+        <details><summary>نمایش پاسخ</summary>
+          <div class="answer">
+            <div class="line">توان مثبت ۵ یعنی ممیز ۵ رقم به راست</div>
+            <div class="line final ltr">پاسخ نهایی: ۲۱۰٬۰۰۰</div>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
 
   <!-- ===================== SECTION 2 : مقایسه اعداد ===================== -->
   <section class="section" id="s2">
     <div class="sec-head">
-      <div class="sec-num" style="background:var(--teal);">۲</div>
-      <div><span class="kicker">بخش دوم</span><h2>مقایسه اعداد، تخمین و تلهٔ اعداد منفی</h2></div>
+      <div class="sec-num" style="background:var(--teal);">۳</div>
+      <div><span class="kicker">بخش سوم</span><h2>مقایسه اعداد، تخمین و تلهٔ اعداد منفی</h2></div>
     </div>
     <div class="sec-intro">
       خیلی از دانش‌آموزها همین‌جا گیر می‌کنند: توی اعداد منفی، «بزرگ‌تر بودن» یعنی چی؟ بیا با هم مرز محور اعداد رو دقیق ببینیم.
@@ -444,8 +599,8 @@
         <tr><th>بازه</th><th>ویژگی</th><th>مثال</th></tr>
         <tr><td>a &gt; ۰</td><td>هرچه بزرگ‌تر شود، دورتر از صفر و «بزرگ‌تر» است</td><td class="ltr">۲ &lt; ۵ &lt; ۱۰</td></tr>
         <tr><td>a &lt; ۰</td><td>هرچه به صفر نزدیک‌تر باشد، بزرگ‌تر است (نه دورتر!)</td><td class="ltr">−۸ &lt; −۵ &lt; −۲</td></tr>
-        <tr><td>۰ &lt; a &lt; ۱</td><td>کسر مثبت کوچک؛ نزدیک صفر</td><td class="ltr">۰٫۲۵ ، <span class="frac"><span class="num">۱</span><span class="den">۳</span></span></td></tr>
-        <tr><td>−۱ &lt; a &lt; ۰</td><td>کسر منفی کوچک؛ نزدیک صفر ولی سمت چپ</td><td class="ltr">−۰٫۵ ، −<span class="frac"><span class="num">۱</span><span class="den">۴</span></span></td></tr>
+        <tr><td>۰ &lt; a &lt; ۱</td><td>کسر مثبت با مخرج کوچک‌تر، بزرگ‌تر است</td><td class="ltr">۰٫۲۵ ، <span class="frac"><span class="num">۱</span><span class="den">۳</span></span></td></tr>
+        <tr><td>−۱ &lt; a &lt; ۰</td><td>کسر منفی با صورت کوچک‌تر، بزرگ‌تر است</td><td class="ltr">−۰٫۵ ، −<span class="frac"><span class="num">۱</span><span class="den">۴</span></span></td></tr>
       </table>
 
       <h3 style="margin-top:18px;">همین منطق روی توان و رادیکال</h3>
@@ -540,7 +695,7 @@
     <div class="card concept">
       <span class="card-label">مفهوم اصلی</span>
       <h3>مقایسهٔ کسرهای گویا (Rational Fractions)</h3>
-      <p>وقتی دو کسر مخرج‌های متفاوت دارند، نمی‌توان مستقیم صورت‌ها را مقایسه کرد. دو راه داریم: رساندن به <b>مخرج مشترک</b>، یا میان‌بر <b>ضرب کشته‌ای</b>:</p>
+      <p>وقتی دو کسر مخرج‌های متفاوت دارند، نمی‌توان مستقیم صورت‌ها را مقایسه کرد. دو راه داریم: رساندن به <b>مخرج مشترک</b>، یا میان‌بر <b>ضرب</b>:</p>
       <div class="formula ltr" style="justify-content:center;">
         <span class="frac"><span class="num">a</span><span class="den">b</span></span> &nbsp;در مقابل&nbsp; <span class="frac"><span class="num">c</span><span class="den">d</span></span> &nbsp;⇔&nbsp; a×d &nbsp;در مقابل&nbsp; c×b
       </div>
@@ -569,7 +724,7 @@
       </div>
       <div class="card example">
         <span class="card-label">مثال ۳</span>
-        <h3>میان‌بر ضرب کشته‌ای</h3>
+        <h3>میان‌بر ضرب</h3>
         <div class="steps">
           <div class="ltr"><span class="frac"><span class="num">۷</span><span class="den">۹</span></span> در مقابل <span class="frac"><span class="num">۵</span><span class="den">۶</span></span></div>
           <div class="ltr">۷×۶=۴۲ &nbsp;در مقابل&nbsp; ۵×۹=۴۵</div>
@@ -687,8 +842,8 @@
   <!-- ===================== SECTION 3 : عوامل و مضرب‌ها ===================== -->
   <section class="section" id="s3">
     <div class="sec-head">
-      <div class="sec-num" style="background:var(--green);">۳</div>
-      <div><span class="kicker">بخش سوم</span><h2>عوامل، مضرب‌ها، اعداد اول و تجزیه</h2></div>
+      <div class="sec-num" style="background:var(--green);">۴</div>
+      <div><span class="kicker">بخش چهارم</span><h2>عوامل، مضرب‌ها، اعداد اول و تجزیه</h2></div>
     </div>
 
     <div class="card concept">
@@ -855,8 +1010,8 @@
   <!-- ===================== SECTION 4 : قوانین توان ===================== -->
   <section class="section" id="s4">
     <div class="sec-head">
-      <div class="sec-num" style="background:var(--navy);">۴</div>
-      <div><span class="kicker">بخش چهارم</span><h2>قوانین پایهٔ توان‌ها (۷ قانون طلایی)</h2></div>
+      <div class="sec-num" style="background:var(--navy);">۵</div>
+      <div><span class="kicker">بخش پنجم</span><h2>قوانین پایهٔ توان‌ها (۷ قانون طلایی)</h2></div>
     </div>
     <div class="sec-intro">
       این هفت قانون، ستون فقرات جبر هستند. باید بتونی بدون نگاه‌کردن به کتاب، هرکدوم رو بنویسی. برای هرکدوم سه مثال متنوع آوردیم تا کاملاً جا بیفتن.
@@ -1004,8 +1159,8 @@
   <!-- ===================== SECTION 5 : رادیکال‌ها ===================== -->
   <section class="section" id="s5">
     <div class="sec-head">
-      <div class="sec-num" style="background:var(--blue);">۵</div>
-      <div><span class="kicker">بخش پنجم</span><h2>ریشه‌ها و رادیکال‌ها: ضرب، تقسیم و ساده‌سازی</h2></div>
+      <div class="sec-num" style="background:var(--blue);">۶</div>
+      <div><span class="kicker">بخش ششم</span><h2>ریشه‌ها و رادیکال‌ها: ضرب، تقسیم و ساده‌سازی</h2></div>
     </div>
 
     <div class="card concept">
@@ -1219,8 +1374,8 @@
   <!-- ===================== SECTION 6 : درصد ===================== -->
   <section class="section" id="s6">
     <div class="sec-head">
-      <div class="sec-num" style="background:var(--gold);">۶</div>
-      <div><span class="kicker">بخش ششم</span><h2>درصدها: زبان تغییرات</h2></div>
+      <div class="sec-num" style="background:var(--gold);">۷</div>
+      <div><span class="kicker">بخش هفتم</span><h2>درصدها: زبان تغییرات</h2></div>
     </div>
 
     <div class="card concept">
@@ -1319,8 +1474,8 @@
   <!-- ===================== SECTION 7 : ترتیب عملیات ===================== -->
   <section class="section" id="s7">
     <div class="sec-head">
-      <div class="sec-num" style="background:var(--red);">۷</div>
-      <div><span class="kicker">بخش هفتم</span><h2>ترتیب عملیات (BODMAS/PEMDAS)</h2></div>
+      <div class="sec-num" style="background:var(--red);">۸</div>
+      <div><span class="kicker">بخش هشتم</span><h2>ترتیب عملیات (BODMAS/PEMDAS)</h2></div>
     </div>
 
     <div class="card concept">
@@ -1429,8 +1584,8 @@
   <!-- ===================== SECTION 8 : جملات هم‌نوع ===================== -->
   <section class="section" id="s8">
     <div class="sec-head">
-      <div class="sec-num" style="background:var(--purple);">۸</div>
-      <div><span class="kicker">بخش هشتم</span><h2>ترکیب جملات هم‌نوع (Like Terms)</h2></div>
+      <div class="sec-num" style="background:var(--purple);">۹</div>
+      <div><span class="kicker">بخش نهم</span><h2>ترکیب جملات هم‌نوع (Like Terms)</h2></div>
     </div>
 
     <div class="card concept">
@@ -1526,8 +1681,8 @@
   <!-- ===================== SECTION 9 : اتحادها ===================== -->
   <section class="section" id="s9">
     <div class="sec-head">
-      <div class="sec-num" style="background:var(--green);">۹</div>
-      <div><span class="kicker">بخش نهم</span><h2>اتحادهای جبری و فاکتورگیری</h2></div>
+      <div class="sec-num" style="background:var(--green);">۱۰</div>
+      <div><span class="kicker">بخش دهم</span><h2>اتحادهای جبری و فاکتورگیری</h2></div>
     </div>
 
     <div class="card concept">
@@ -1672,167 +1827,12 @@
     </div>
   </section>
 
-  <!-- ===================== SECTION 10 : اعداد اعشاری و نمایش علمی ===================== -->
-  <section class="section" id="s10">
-    <div class="sec-head">
-      <div class="sec-num" style="background:var(--teal);">۱۰</div>
-      <div><span class="kicker">بخش تکمیلی</span><h2>اعداد اعشاری و نمایش علمی (Scientific Notation)</h2></div>
-    </div>
-
-    <div class="card concept">
-      <span class="card-label">مفاهیم اصلی</span>
-      <h3>سه نوع عدد اعشاری (Decimal Number)</h3>
-      <table>
-        <tr><th>نوع</th><th>تعریف</th><th>مثال</th><th>گویا/گنگ</th></tr>
-        <tr><td>پایان‌پذیر<br><span style="font-size:11.5px;color:var(--sub);">Terminal Decimal</span></td><td>اعشار در جایی تمام می‌شود</td><td class="ltr">۱٫۲ &nbsp;،&nbsp; ۰٫۱۲۵</td><td>گویا</td></tr>
-        <tr><td>متناوب<br><span style="font-size:11.5px;color:var(--sub);">Repeating Decimal</span></td><td>یک الگو تا بی‌نهایت تکرار می‌شود</td><td class="ltr">۰٫۳۳۳...</td><td>گویا</td></tr>
-        <tr><td>غیرمتناوب<br><span style="font-size:11.5px;color:var(--sub);">Non-repeating Infinite Decimal</span></td><td>بی‌نهایت رقم، بدون هیچ الگویی</td><td class="ltr">π = ۳٫۱۴۱۵۹۲...</td><td>گنگ</td></tr>
-      </table>
-      <p>راز تشخیص سریع نوع اول (پایان‌پذیر) بدون نیاز به تقسیم: کسر را ساده کن و مخرج را تجزیه کن — اگر مخرج <b>فقط</b> از عامل‌های ۲ و ۵ ساخته شده باشد، اعشار پایان‌پذیر است؛ در غیر این‌صورت متناوب می‌شود.</p>
-      <p style="font-size:13.5px;color:var(--sub);">این دقیقاً همان تقسیم اقلیدسی است که در بخش تقسیم دیدیم: a = b×q + r با ۰≤r&lt;b؛ اگر باقیمانده هرگز صفر نشود و الگویش تکرار شود، اعشار متناوب می‌سازد.</p>
-    </div>
-
-    <div class="grid3">
-      <div class="card example">
-        <span class="card-label">مثال ۱ — پایان‌پذیر</span>
-        <h3 class="ltr" style="justify-content:flex-start;"><span class="frac"><span class="num">۳</span><span class="den">۲۰</span></span></h3>
-        <div class="steps">
-          <div>۲۰ = ۲² × ۵ → فقط عامل‌های ۲ و ۵</div>
-          <div class="ltr"><span class="frac"><span class="num">۳</span><span class="den">۲۰</span></span> = <span class="frac"><span class="num">۱۵</span><span class="den">۱۰۰</span></span></div>
-        </div>
-        <div class="result ltr">نتیجه: ۰٫۱۵ (پایان‌پذیر)</div>
-      </div>
-      <div class="card example">
-        <span class="card-label">مثال ۲ — متناوب</span>
-        <h3 class="ltr" style="justify-content:flex-start;"><span class="frac"><span class="num">۲</span><span class="den">۹</span></span></h3>
-        <div class="steps">
-          <div>۹ = ۳² → عامل ۳ دارد، نه فقط ۲ و ۵</div>
-          <div>تقسیم طولانی هرگز باقیماندهٔ صفر نمی‌دهد و رقم ۲ تکرار می‌شود</div>
-        </div>
-        <div class="result ltr">نتیجه: ۰٫۲۲۲... (متناوب)</div>
-      </div>
-      <div class="card example">
-        <span class="card-label">مثال ۳ — پایان‌پذیر</span>
-        <h3 class="ltr" style="justify-content:flex-start;"><span class="frac"><span class="num">۷</span><span class="den">۸</span></span></h3>
-        <div class="steps">
-          <div>۸ = ۲³ → فقط عامل ۲</div>
-          <div class="ltr"><span class="frac"><span class="num">۷</span><span class="den">۸</span></span> = <span class="frac"><span class="num">۸۷۵</span><span class="den">۱۰۰۰</span></span></div>
-        </div>
-        <div class="result ltr">نتیجه: ۰٫۸۷۵ (پایان‌پذیر)</div>
-      </div>
-    </div>
-
-    <div class="card mistake">
-      <span class="card-label">اشتباهات پرتکرار</span>
-      <ul>
-        <li>فکر نکن هر عدد با رقم‌های اعشاری زیاد، گنگ است — تعیین‌کننده «الگو داشتن» است، نه «طول».</li>
-        <li>در تشخیص سریع، فقط مخرجِ کسرِ <b>ساده‌شده</b> را تجزیه کن، نه مخرج اولیه (اگر کسر ساده نشده باشد جواب اشتباه می‌شود).</li>
-      </ul>
-    </div>
-
-    <div class="card examtip">
-      <span class="card-label">نکات امتحانی</span>
-      <ul>
-        <li>قبل از هر تقسیم طولانی، اول با تجزیهٔ مخرج، نوع اعشار را حدس بزن تا وقت هدر ندهی.</li>
-        <li>اعشار متناوب همیشه گویاست، چون همیشه قابل نوشتن به‌شکل کسر است.</li>
-      </ul>
-    </div>
-
-    <div class="card concept">
-      <span class="card-label">مفاهیم اصلی</span>
-      <h3>نمایش علمی اعداد (Scientific Notation)</h3>
-      <p>برای نوشتن اعداد خیلی بزرگ یا خیلی کوچک به شکل فشرده استفاده می‌شود:</p>
-      <div class="formula ltr" style="justify-content:center;">a × 10ⁿ <span style="font-size:12px;">(۱ ≤ a &lt; ۱۰)</span></div>
-      <p>اگر ممیز را به چپ ببری تا فقط یک رقم غیرصفر قبلش بماند، تعداد جابه‌جایی‌ها توان <b>مثبت</b> می‌شود؛ اگر به راست ببری (برای اعداد کوچک‌تر از ۱)، توان <b>منفی</b> می‌شود.</p>
-    </div>
-    <div class="grid3">
-      <div class="card example">
-        <span class="card-label">مثال ۴</span>
-        <h3 class="ltr" style="justify-content:flex-start;">۵۰۰</h3>
-        <div class="steps"><div>ممیز را ۲ رقم به چپ می‌بریم: ۵٫۰۰</div></div>
-        <div class="result ltr">نتیجه: ۵ × ۱۰²</div>
-      </div>
-      <div class="card example">
-        <span class="card-label">مثال ۵</span>
-        <h3 class="ltr" style="justify-content:flex-start;">۰٫۰۰۰۲۵</h3>
-        <div class="steps"><div>ممیز را ۴ رقم به راست می‌بریم تا برسد به ۲٫۵</div></div>
-        <div class="result ltr">نتیجه: ۲٫۵ × ۱۰⁻⁴</div>
-      </div>
-      <div class="card example">
-        <span class="card-label">مثال ۶</span>
-        <h3 class="ltr" style="justify-content:flex-start;">۳۵۶۷۸۹۳</h3>
-        <div class="steps"><div>ممیز را ۶ رقم به چپ می‌بریم تا برسد به ۳٫۵۶۷۸۹۳</div></div>
-        <div class="result ltr">نتیجه: ۳٫۵۶۷۸۹۳ × ۱۰⁶</div>
-      </div>
-    </div>
-    <div class="grid2">
-      <div class="card example">
-        <span class="card-label">مثال ۷ — بازگشت به فرم عادی</span>
-        <h3 class="ltr" style="justify-content:flex-start;">۳٫۴ × ۱۰⁻⁴</h3>
-        <div class="steps"><div>توان منفی ۴ یعنی ممیز ۴ رقم به چپ (عدد کوچک می‌شود)</div></div>
-        <div class="result ltr">نتیجه: ۰٫۰۰۰۳۴</div>
-      </div>
-      <div class="card example">
-        <span class="card-label">مثال ۸ — بازگشت به فرم عادی</span>
-        <h3 class="ltr" style="justify-content:flex-start;">۳٫۴ × ۱۰⁺⁴</h3>
-        <div class="steps"><div>توان مثبت ۴ یعنی ممیز ۴ رقم به راست (عدد بزرگ می‌شود)</div></div>
-        <div class="result ltr">نتیجه: ۳۴٬۰۰۰</div>
-      </div>
-    </div>
-
-    <div class="card mistake">
-      <span class="card-label">اشتباهات پرتکرار</span>
-      <ul>
-        <li>a باید همیشه بین ۱ و ۱۰ باشد (۱≤a&lt;۱۰)؛ نوشتن ۲۵×۱۰³ به‌جای ۲٫۵×۱۰⁴ اشتباه است.</li>
-        <li>جهت توان را قاطی نکن: عدد بزرگ‌تر از ۱۰ → توان مثبت؛ عدد کوچک‌تر از ۱ → توان منفی.</li>
-      </ul>
-    </div>
-
-    <div class="card examtip">
-      <span class="card-label">نکات امتحانی</span>
-      <ul>
-        <li>توان = تعداد خانه‌هایی که ممیز جابه‌جا شده؛ فقط جهتش را با علامت درست کن.</li>
-        <li>برای اعداد منفی، فقط علامت منفی جلوی a می‌آید و روی محاسبهٔ توان اثری ندارد.</li>
-      </ul>
-    </div>
-
-    <div class="card practice">
-      <span class="card-label">تمرین این بخش</span>
-      <div class="qitem">
-        <b class="qnum">۱</b><span class="ltr"><span class="frac"><span class="num">۵</span><span class="den">۱۶</span></span></span> پایان‌پذیر است یا متناوب؟
-        <details><summary>نمایش پاسخ</summary>
-          <div class="answer">
-            <div class="line">۱۶ = ۲⁴ → فقط عامل ۲</div>
-            <div class="line final">پاسخ نهایی: پایان‌پذیر (۰٫۳۱۲۵)</div>
-          </div>
-        </details>
-      </div>
-      <div class="qitem">
-        <b class="qnum">۲</b>عدد ۰٫۰۰۰۰۷۸ را به نمایش علمی تبدیل کن.
-        <details><summary>نمایش پاسخ</summary>
-          <div class="answer">
-            <div class="line">ممیز را ۵ رقم به راست می‌بریم تا برسد به ۷٫۸</div>
-            <div class="line final ltr">پاسخ نهایی: ۷٫۸ × ۱۰⁻⁵</div>
-          </div>
-        </details>
-      </div>
-      <div class="qitem">
-        <b class="qnum">۳</b>عدد ۲٫۱ × ۱۰⁵ را به فرم عادی بنویس.
-        <details><summary>نمایش پاسخ</summary>
-          <div class="answer">
-            <div class="line">توان مثبت ۵ یعنی ممیز ۵ رقم به راست</div>
-            <div class="line final ltr">پاسخ نهایی: ۲۱۰٬۰۰۰</div>
-          </div>
-        </details>
-      </div>
-    </div>
-  </section>
 
   <!-- ===================== SECTION 11 : بخش‌پذیری اعداد ===================== -->
   <section class="section" id="s11">
     <div class="sec-head">
       <div class="sec-num" style="background:var(--red);">۱۱</div>
-      <div><span class="kicker">بخش تکمیلی</span><h2>بخش‌پذیری اعداد (Divisibility Rules)</h2></div>
+      <div><span class="kicker">بخش یازدهم</span><h2>بخش‌پذیری اعداد (Divisibility Rules)</h2></div>
     </div>
     <div class="sec-intro">
       این بخش کلید <b>سرعت</b> در امتحان است: به‌جای تقسیم‌کردن واقعی هر عدد، با نگاه‌کردن به چند رقم آخر یا مجموع ارقام، همان لحظه می‌فهمی یک عدد بر عدد دیگر بخش‌پذیر هست یا نه.
@@ -2015,6 +2015,7 @@
       <h2>پایان فصل ۱: جعبه‌ابزار شما اکنون کامل است 🧰</h2>
       <div class="toolbox">
         <span>معماری اعداد</span>
+        <span>اعشار و نمایش علمی</span>
         <span>مقایسه و تخمین</span>
         <span>عوامل و مضرب‌ها</span>
         <span>HCF / LCM</span>
@@ -2024,17 +2025,16 @@
         <span>BODMAS</span>
         <span>جملات هم‌نوع</span>
         <span>اتحادها</span>
-        <span>اعشار و نمایش علمی</span>
         <span>بخش‌پذیری</span>
       </div>
       <p>
-        از شناخت ماهیت اعداد (بخش ۱) شروع کردی، منطق مقایسه و تجزیه را (بخش‌های ۲ و ۳) درک کردی، بر توان‌ها و
-        رادیکال‌ها مسلط شدی (بخش‌های ۴ و ۵)، تغییرات درصدی را سنجیدی (بخش ۶)، و در نهایت یاد گرفتی چگونه
-        پیچیده‌ترین عبارت‌ها را با قوانین جبری ساده کنی (بخش‌های ۷ تا ۹).
+        از شناخت ماهیت اعداد (بخش ۱) شروع کردی، منطق مقایسه و تجزیه رو (بخش‌های ۲ و ۳) درک کردی، بر توان‌ها و
+        رادیکال‌ها مسلط شدی (بخش‌های ۴ و ۵)، تغییرات درصدی رو سنجیدی (بخش ۶)، و در نهایت یاد گرفتی چگونه
+        پیچیده‌ترین عبارت‌ها رو با قوانین جبری ساده کنی (بخش‌های ۷ تا ۹).
       </p>
       <div class="compass">
-        🧭 ریاضیات حفظ‌کردن فرمول نیست؛ بلکه توانایی ترکیب این ابزارها برای حل مسائل جدید است.
-        این جزوه را به‌عنوان مرجع همیشگی خودت نگه دار — یادگیری‌ات به پایان نرسیده، تازه آغاز شده است.
+        🧭 ریاضیات حفظ‌کردن فرمول نیست؛ بلکه توانایی ترکیب این ابزارها برای حل مسائل جدید هست.
+        این جزوه رو به‌عنوان مرجع همیشگی خودت نگه دار — یادگیری‌ات به پایان نرسیده، تازه آغاز شده.
       </div>
     </div>
   </section>
