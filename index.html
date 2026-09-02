@@ -167,7 +167,8 @@
   .frac{display:inline-flex;flex-direction:column;text-align:center;vertical-align:middle;margin:0 3px;font-size:14px;}
   .frac span{display:block;padding:0 4px;}
   .frac .num{border-bottom:1.6px solid currentColor;}
-  .ltr{direction:ltr;unicode-bidi:embed;display:inline-flex;align-items:center;gap:4px;font-family:'Vazirmatn',sans-serif;}
+  .ltr{direction:ltr;unicode-bidi:isolate;display:inline-flex;align-items:center;gap:4px;font-family:'Vazirmatn',sans-serif;}
+  sup{font-size:0.68em;line-height:0;position:relative;top:-0.5em;}
   .quick-check{
     margin-top:12px;background:#fff;border:1px dashed #b7ddc7;border-radius:10px;padding:10px 14px;
   }
@@ -246,13 +247,13 @@
   <a href="#s10">۲. اعشار و نمایش علمی</a>
   <a href="#s2">۳. مقایسه و تخمین</a>
   <a href="#s3">۴. عوامل و مضرب‌ها</a>
-  <a href="#s4">۵. قوانین توان</a>
-  <a href="#s5">۶. رادیکال‌ها</a>
-  <a href="#s6">۷. درصد</a>
-  <a href="#s7">۸. ترتیب عملیات</a>
-  <a href="#s8">۹. جملات هم‌نوع</a>
-  <a href="#s9">۱۰. اتحادها</a>
-  <a href="#s11">۱۱. بخش‌پذیری</a>
+  <a href="#s11">۵. بخش‌پذیری</a>
+  <a href="#s6">۶. درصد</a>
+  <a href="#s4">۷. قوانین توان</a>
+  <a href="#s5">۸. رادیکال‌ها</a>
+  <a href="#s7">۹. ترتیب عملیات</a>
+  <a href="#s8">۱۰. جملات هم‌نوع</a>
+  <a href="#s9">۱۱. اتحادها</a>
   <a href="#summary">جمع‌بندی</a>
 </nav>
 
@@ -425,6 +426,7 @@
       </div>
     </div>
   </section>
+
   <!-- ===================== SECTION 10 : اعداد اعشاری و نمایش علمی ===================== -->
   <section class="section" id="s10">
     <div class="sec-head">
@@ -450,7 +452,7 @@
         <span class="card-label">مثال ۱ — پایان‌پذیر</span>
         <h3 class="ltr" style="justify-content:flex-start;"><span class="frac"><span class="num">۳</span><span class="den">۲۰</span></span></h3>
         <div class="steps">
-          <div>۲۰ = ۲² × ۵ → فقط عامل‌های ۲ و ۵</div>
+          <div>۲۰ = ۲<sup>۲</sup> × ۵ → فقط عامل‌های ۲ و ۵</div>
           <div class="ltr"><span class="frac"><span class="num">۳</span><span class="den">۲۰</span></span> = <span class="frac"><span class="num">۱۵</span><span class="den">۱۰۰</span></span></div>
         </div>
         <div class="result ltr">نتیجه: ۰٫۱۵ (پایان‌پذیر)</div>
@@ -459,7 +461,7 @@
         <span class="card-label">مثال ۲ — متناوب</span>
         <h3 class="ltr" style="justify-content:flex-start;"><span class="frac"><span class="num">۲</span><span class="den">۹</span></span></h3>
         <div class="steps">
-          <div>۹ = ۳² → عامل ۳ دارد، نه فقط ۲ و ۵</div>
+          <div>۹ = ۳<sup>۲</sup> → عامل ۳ دارد، نه فقط ۲ و ۵</div>
           <div>تقسیم طولانی هرگز باقیماندهٔ صفر نمی‌دهد و رقم ۲ تکرار می‌شود</div>
         </div>
         <div class="result ltr">نتیجه: ۰٫۲۲۲... (متناوب)</div>
@@ -468,7 +470,7 @@
         <span class="card-label">مثال ۳ — پایان‌پذیر</span>
         <h3 class="ltr" style="justify-content:flex-start;"><span class="frac"><span class="num">۷</span><span class="den">۸</span></span></h3>
         <div class="steps">
-          <div>۸ = ۲³ → فقط عامل ۲</div>
+          <div>۸ = ۲<sup>۳</sup> → فقط عامل ۲</div>
           <div class="ltr"><span class="frac"><span class="num">۷</span><span class="den">۸</span></span> = <span class="frac"><span class="num">۸۷۵</span><span class="den">۱۰۰۰</span></span></div>
         </div>
         <div class="result ltr">نتیجه: ۰٫۸۷۵ (پایان‌پذیر)</div>
@@ -495,7 +497,7 @@
       <span class="card-label">مفاهیم اصلی</span>
       <h3>نمایش علمی اعداد (Scientific Notation)</h3>
       <p>برای نوشتن اعداد خیلی بزرگ یا خیلی کوچک به شکل فشرده استفاده می‌شود:</p>
-      <div class="formula ltr" style="justify-content:center;">a × 10ⁿ <span style="font-size:12px;">(۱ ≤ a &lt; ۱۰)</span></div>
+      <div class="formula ltr" style="justify-content:center;">a × 10<sup>n</sup> <span style="font-size:12px;">(۱ ≤ a &lt; ۱۰)</span></div>
       <p>اگر ممیز را به چپ ببری تا فقط یک رقم غیرصفر قبلش بماند، تعداد جابه‌جایی‌ها توان <b>مثبت</b> می‌شود؛ اگر به راست ببری (برای اعداد کوچک‌تر از ۱)، توان <b>منفی</b> می‌شود.</p>
     </div>
     <div class="grid3">
@@ -503,31 +505,31 @@
         <span class="card-label">مثال ۴</span>
         <h3 class="ltr" style="justify-content:flex-start;">۵۰۰</h3>
         <div class="steps"><div>ممیز را ۲ رقم به چپ می‌بریم: ۵٫۰۰</div></div>
-        <div class="result ltr">نتیجه: ۵ × ۱۰²</div>
+        <div class="result ltr">نتیجه: ۵ × ۱۰<sup>۲</sup></div>
       </div>
       <div class="card example">
         <span class="card-label">مثال ۵</span>
         <h3 class="ltr" style="justify-content:flex-start;">۰٫۰۰۰۲۵</h3>
         <div class="steps"><div>ممیز را ۴ رقم به راست می‌بریم تا برسد به ۲٫۵</div></div>
-        <div class="result ltr">نتیجه: ۲٫۵ × ۱۰⁻⁴</div>
+        <div class="result ltr">نتیجه: ۲٫۵ × ۱۰<sup>−۴</sup></div>
       </div>
       <div class="card example">
         <span class="card-label">مثال ۶</span>
         <h3 class="ltr" style="justify-content:flex-start;">۳۵۶۷۸۹۳</h3>
         <div class="steps"><div>ممیز را ۶ رقم به چپ می‌بریم تا برسد به ۳٫۵۶۷۸۹۳</div></div>
-        <div class="result ltr">نتیجه: ۳٫۵۶۷۸۹۳ × ۱۰⁶</div>
+        <div class="result ltr">نتیجه: ۳٫۵۶۷۸۹۳ × ۱۰<sup>۶</sup></div>
       </div>
     </div>
     <div class="grid2">
       <div class="card example">
         <span class="card-label">مثال ۷ — بازگشت به فرم عادی</span>
-        <h3 class="ltr" style="justify-content:flex-start;">۳٫۴ × ۱۰⁻⁴</h3>
+        <h3 class="ltr" style="justify-content:flex-start;">۳٫۴ × ۱۰<sup>−۴</sup></h3>
         <div class="steps"><div>توان منفی ۴ یعنی ممیز ۴ رقم به چپ (عدد کوچک می‌شود)</div></div>
         <div class="result ltr">نتیجه: ۰٫۰۰۰۳۴</div>
       </div>
       <div class="card example">
         <span class="card-label">مثال ۸ — بازگشت به فرم عادی</span>
-        <h3 class="ltr" style="justify-content:flex-start;">۳٫۴ × ۱۰⁺⁴</h3>
+        <h3 class="ltr" style="justify-content:flex-start;">۳٫۴ × ۱۰<sup>+۴</sup></h3>
         <div class="steps"><div>توان مثبت ۴ یعنی ممیز ۴ رقم به راست (عدد بزرگ می‌شود)</div></div>
         <div class="result ltr">نتیجه: ۳۴٬۰۰۰</div>
       </div>
@@ -536,7 +538,7 @@
     <div class="card mistake">
       <span class="card-label">اشتباهات پرتکرار</span>
       <ul>
-        <li>a باید همیشه بین ۱ و ۱۰ باشد (۱≤a&lt;۱۰)؛ نوشتن ۲۵×۱۰³ به‌جای ۲٫۵×۱۰⁴ اشتباه است.</li>
+        <li>a باید همیشه بین ۱ و ۱۰ باشد (۱≤a&lt;۱۰)؛ نوشتن ۲۵×۱۰<sup>۳</sup> به‌جای ۲٫۵×۱۰<sup>۴</sup> اشتباه است.</li>
         <li>جهت توان را قاطی نکن: عدد بزرگ‌تر از ۱۰ → توان مثبت؛ عدد کوچک‌تر از ۱ → توان منفی.</li>
       </ul>
     </div>
@@ -555,7 +557,7 @@
         <b class="qnum">۱</b><span class="ltr"><span class="frac"><span class="num">۵</span><span class="den">۱۶</span></span></span> پایان‌پذیر است یا متناوب؟
         <details><summary>نمایش پاسخ</summary>
           <div class="answer">
-            <div class="line">۱۶ = ۲⁴ → فقط عامل ۲</div>
+            <div class="line">۱۶ = ۲<sup>۴</sup> → فقط عامل ۲</div>
             <div class="line final">پاسخ نهایی: پایان‌پذیر (۰٫۳۱۲۵)</div>
           </div>
         </details>
@@ -565,12 +567,12 @@
         <details><summary>نمایش پاسخ</summary>
           <div class="answer">
             <div class="line">ممیز را ۵ رقم به راست می‌بریم تا برسد به ۷٫۸</div>
-            <div class="line final ltr">پاسخ نهایی: ۷٫۸ × ۱۰⁻⁵</div>
+            <div class="line final ltr">پاسخ نهایی: ۷٫۸ × ۱۰<sup>−۵</sup></div>
           </div>
         </details>
       </div>
       <div class="qitem">
-        <b class="qnum">۳</b>عدد ۲٫۱ × ۱۰⁵ را به فرم عادی بنویس.
+        <b class="qnum">۳</b>عدد ۲٫۱ × ۱۰<sup>۵</sup> را به فرم عادی بنویس.
         <details><summary>نمایش پاسخ</summary>
           <div class="answer">
             <div class="line">توان مثبت ۵ یعنی ممیز ۵ رقم به راست</div>
@@ -599,20 +601,20 @@
         <tr><th>بازه</th><th>ویژگی</th><th>مثال</th></tr>
         <tr><td>a &gt; ۰</td><td>هرچه بزرگ‌تر شود، دورتر از صفر و «بزرگ‌تر» است</td><td class="ltr">۲ &lt; ۵ &lt; ۱۰</td></tr>
         <tr><td>a &lt; ۰</td><td>هرچه به صفر نزدیک‌تر باشد، بزرگ‌تر است (نه دورتر!)</td><td class="ltr">−۸ &lt; −۵ &lt; −۲</td></tr>
-        <tr><td>۰ &lt; a &lt; ۱</td><td>کسر مثبت با مخرج کوچک‌تر، بزرگ‌تر است</td><td class="ltr">۰٫۲۵ ، <span class="frac"><span class="num">۱</span><span class="den">۳</span></span></td></tr>
-        <tr><td>−۱ &lt; a &lt; ۰</td><td>کسر منفی با صورت کوچک‌تر، بزرگ‌تر است</td><td class="ltr">−۰٫۵ ، −<span class="frac"><span class="num">۱</span><span class="den">۴</span></span></td></tr>
+        <tr><td>۰ &lt; a &lt; ۱</td><td>کسر مثبت کوچک؛ نزدیک صفر</td><td class="ltr">۰٫۲۵ ، <span class="frac"><span class="num">۱</span><span class="den">۳</span></span></td></tr>
+        <tr><td>−۱ &lt; a &lt; ۰</td><td>کسر منفی کوچک؛ نزدیک صفر ولی سمت چپ</td><td class="ltr">−۰٫۵ ، −<span class="frac"><span class="num">۱</span><span class="den">۴</span></span></td></tr>
       </table>
 
       <h3 style="margin-top:18px;">همین منطق روی توان و رادیکال</h3>
       <p>وقتی پایهٔ a را به توان‌های بالاتر می‌بریم یا از آن ریشه می‌گیریم، رفتار عدد بسته به بازهٔ a کاملاً فرق می‌کند:</p>
       <table>
         <tr><th>بازهٔ a</th><th>ترتیب مقایسه</th><th>مثال</th></tr>
-        <tr><td>a &gt; ۱</td><td class="ltr">۱ &lt; ∛a &lt; √a &lt; a &lt; a² &lt; a³</td><td class="ltr">a=۳: ۱&lt;∛۳&lt;√۳&lt;۳&lt;۹&lt;۲۷</td></tr>
-        <tr><td>۰ &lt; a &lt; ۱</td><td class="ltr">a³ &lt; a² &lt; a &lt; √a &lt; ∛a &lt; ۱</td><td class="ltr">a=¼: ۰٫۰۱۶&lt;۰٫۰۶۳&lt;۰٫۲۵&lt;۰٫۵&lt;۰٫۶۳&lt;۱</td></tr>
-        <tr><td>−۱ &lt; a &lt; ۰</td><td class="ltr">⁵√a &lt; ∛a &lt; a &lt; a³ &lt; ۰ &lt; a²</td><td class="ltr">a=−⅛: −۰٫۶۶&lt;−۰٫۵&lt;−۰٫۱۲۵&lt;−۰٫۰۰۲&lt;۰&lt;۰٫۰۱۶</td></tr>
-        <tr><td>a &lt; −۱</td><td class="ltr">a³ &lt; a &lt; ∛a &lt; ⁵√a &lt; a²</td><td class="ltr">a=−۲: −۸&lt;−۲&lt;−۱٫۲۶&lt;−۱٫۱۵&lt;۴</td></tr>
+        <tr><td>a &gt; ۱</td><td class="ltr">۱ &lt; ∛a &lt; √a &lt; a &lt; a<sup>۲</sup> &lt; a<sup>۳</sup></td><td class="ltr">a=۳: ۱&lt;∛۳&lt;√۳&lt;۳&lt;۹&lt;۲۷</td></tr>
+        <tr><td>۰ &lt; a &lt; ۱</td><td class="ltr">a<sup>۳</sup> &lt; a<sup>۲</sup> &lt; a &lt; √a &lt; ∛a &lt; ۱</td><td class="ltr">a=¼: ۰٫۰۱۶&lt;۰٫۰۶۳&lt;۰٫۲۵&lt;۰٫۵&lt;۰٫۶۳&lt;۱</td></tr>
+        <tr><td>−۱ &lt; a &lt; ۰</td><td class="ltr"><sup>۵</sup>√a &lt; ∛a &lt; a &lt; a<sup>۳</sup> &lt; ۰ &lt; a<sup>۲</sup></td><td class="ltr">a=−⅛: −۰٫۶۶&lt;−۰٫۵&lt;−۰٫۱۲۵&lt;−۰٫۰۰۲&lt;۰&lt;۰٫۰۱۶</td></tr>
+        <tr><td>a &lt; −۱</td><td class="ltr">a<sup>۳</sup> &lt; a &lt; ∛a &lt; <sup>۵</sup>√a &lt; a<sup>۲</sup></td><td class="ltr">a=−۲: −۸&lt;−۲&lt;−۱٫۲۶&lt;−۱٫۱۵&lt;۴</td></tr>
       </table>
-      <p style="font-size:13.5px;color:var(--sub);">نکتهٔ کلیدی: وقتی |a| بزرگ‌تر از ۱ باشد، توان‌گرفتن عدد را «بزرگ‌تر» می‌کند و ریشه‌گرفتن آن را «کوچک‌تر». وقتی ۰&lt;|a|&lt;۱ باشد، دقیقاً برعکس می‌شود! برای اعداد منفی، چون رادیکال زوج (√) تعریف‌نشده است، به‌جایش از ریشه‌های فرد (∛ ، ⁵√) استفاده می‌کنیم.</p>
+      <p style="font-size:13.5px;color:var(--sub);">نکتهٔ کلیدی: وقتی |a| بزرگ‌تر از ۱ باشد، توان‌گرفتن عدد را «بزرگ‌تر» می‌کند و ریشه‌گرفتن آن را «کوچک‌تر». وقتی ۰&lt;|a|&lt;۱ باشد، دقیقاً برعکس می‌شود! برای اعداد منفی، چون رادیکال زوج (√) تعریف‌نشده است، به‌جایش از ریشه‌های فرد (∛ ، <sup>۵</sup>√) استفاده می‌کنیم.</p>
     </div>
 
     <div class="sec-intro" style="background:var(--green-bg);border-color:#c7e8d6;">
@@ -623,7 +625,7 @@
         <span class="card-label">بازهٔ a &gt; ۱</span>
         <h3 class="ltr" style="justify-content:flex-start;">a = ۳</h3>
         <div class="steps">
-          <div class="ltr">۱ &lt; ∛۳ &lt; √۳ &lt; ۳ &lt; ۳² &lt; ۳³</div>
+          <div class="ltr">۱ &lt; ∛۳ &lt; √۳ &lt; ۳ &lt; ۳<sup>۲</sup> &lt; ۳<sup>۳</sup></div>
           <div class="ltr">۱ &lt; ۱٫۴۴ &lt; ۱٫۷۳ &lt; ۳ &lt; ۹ &lt; ۲۷</div>
         </div>
         <div class="result">هرچه توان بالاتر، عدد بزرگ‌تر؛ هرچه فرجهٔ ریشه بالاتر، عدد کوچک‌تر</div>
@@ -641,15 +643,15 @@
         <span class="card-label">بازهٔ ۰ &lt; a &lt; ۱</span>
         <h3 class="ltr" style="justify-content:flex-start;">a = <span class="frac"><span class="num">۱</span><span class="den">۴</span></span></h3>
         <div class="steps">
-          <div class="ltr">a³ &lt; a² &lt; a &lt; √a &lt; ∛a &lt; ۱</div>
+          <div class="ltr">a<sup>۳</sup> &lt; a<sup>۲</sup> &lt; a &lt; √a &lt; ∛a &lt; ۱</div>
           <div class="ltr">۰٫۰۱۶ &lt; ۰٫۰۶۳ &lt; ۰٫۲۵ &lt; ۰٫۵ &lt; ۰٫۶۳ &lt; ۱</div>
         </div>
         <div class="result">اینجا دقیقاً برعکس بازهٔ قبلی است: توان بالاتر یعنی کوچک‌تر</div>
         <div class="quick-check">
-          <details><summary>تست سریع: برای a=۱/۹، کدام بزرگ‌تر است؟ a یا a²</summary>
+          <details><summary>تست سریع: برای a=۱/۹، کدام بزرگ‌تر است؟ a یا a<sup>۲</sup></summary>
             <div class="answer">
               <div class="line">چون ۰&lt;a&lt;۱ است، توان بالاتر عدد را کوچک‌تر می‌کند.</div>
-              <div class="line ltr">a = ۰٫۱۱۱ &nbsp;و&nbsp; a² = ۰٫۰۱۲۳</div>
+              <div class="line ltr">a = ۰٫۱۱۱ &nbsp;و&nbsp; a<sup>۲</sup> = ۰٫۰۱۲۳</div>
               <div class="line final">پاسخ نهایی: a بزرگ‌تر است</div>
             </div>
           </details>
@@ -659,10 +661,10 @@
         <span class="card-label">بازهٔ −۱ &lt; a &lt; ۰</span>
         <h3 class="ltr" style="justify-content:flex-start;">a = −<span class="frac"><span class="num">۱</span><span class="den">۸</span></span></h3>
         <div class="steps">
-          <div class="ltr">⁵√a &lt; ∛a &lt; a &lt; a³ &lt; ۰ &lt; a²</div>
+          <div class="ltr"><sup>۵</sup>√a &lt; ∛a &lt; a &lt; a<sup>۳</sup> &lt; ۰ &lt; a<sup>۲</sup></div>
           <div class="ltr">−۰٫۶۶ &lt; −۰٫۵ &lt; −۰٫۱۲۵ &lt; −۰٫۰۰۲ &lt; ۰ &lt; ۰٫۰۱۶</div>
         </div>
-        <div class="result">ریشهٔ فرد با فرجهٔ بالاتر، عدد را «منفی‌تر» می‌کند؛ a² همیشه مثبت و ته صف است</div>
+        <div class="result">ریشهٔ فرد با فرجهٔ بالاتر، عدد را «منفی‌تر» می‌کند؛ a<sup>۲</sup> همیشه مثبت و ته صف است</div>
         <div class="quick-check">
           <details><summary>تست سریع: برای a=−۱/۲۷، کدام بزرگ‌تر است؟ a یا ∛a</summary>
             <div class="answer">
@@ -677,14 +679,14 @@
         <span class="card-label">بازهٔ a &lt; −۱</span>
         <h3 class="ltr" style="justify-content:flex-start;">a = −۲</h3>
         <div class="steps">
-          <div class="ltr">a³ &lt; a &lt; ∛a &lt; ⁵√a &lt; a²</div>
+          <div class="ltr">a<sup>۳</sup> &lt; a &lt; ∛a &lt; <sup>۵</sup>√a &lt; a<sup>۲</sup></div>
           <div class="ltr">−۸ &lt; −۲ &lt; −۱٫۲۶ &lt; −۱٫۱۵ &lt; ۴</div>
         </div>
         <div class="result">مکعب، عدد را خیلی منفی‌تر می‌کند؛ ریشه‌گرفتن آن را به صفر نزدیک می‌کند</div>
         <div class="quick-check">
-          <details><summary>تست سریع: برای a=−۳، کدام بزرگ‌تر است؟ a یا a³</summary>
+          <details><summary>تست سریع: برای a=−۳، کدام بزرگ‌تر است؟ a یا a<sup>۳</sup></summary>
             <div class="answer">
-              <div class="line ltr">a = −۳ &nbsp;و&nbsp; a³ = −۲۷</div>
+              <div class="line ltr">a = −۳ &nbsp;و&nbsp; a<sup>۳</sup> = −۲۷</div>
               <div class="line final">پاسخ نهایی: a بزرگ‌تر است (−۳ &gt; −۲۷)</div>
             </div>
           </details>
@@ -695,7 +697,7 @@
     <div class="card concept">
       <span class="card-label">مفهوم اصلی</span>
       <h3>مقایسهٔ کسرهای گویا (Rational Fractions)</h3>
-      <p>وقتی دو کسر مخرج‌های متفاوت دارند، نمی‌توان مستقیم صورت‌ها را مقایسه کرد. دو راه داریم: رساندن به <b>مخرج مشترک</b>، یا میان‌بر <b>ضرب</b>:</p>
+      <p>وقتی دو کسر مخرج‌های متفاوت دارند، نمی‌توان مستقیم صورت‌ها را مقایسه کرد. دو راه داریم: رساندن به <b>مخرج مشترک</b>، یا میان‌بر <b>ضرب کشته‌ای</b>:</p>
       <div class="formula ltr" style="justify-content:center;">
         <span class="frac"><span class="num">a</span><span class="den">b</span></span> &nbsp;در مقابل&nbsp; <span class="frac"><span class="num">c</span><span class="den">d</span></span> &nbsp;⇔&nbsp; a×d &nbsp;در مقابل&nbsp; c×b
       </div>
@@ -724,7 +726,7 @@
       </div>
       <div class="card example">
         <span class="card-label">مثال ۳</span>
-        <h3>میان‌بر ضرب</h3>
+        <h3>میان‌بر ضرب کشته‌ای</h3>
         <div class="steps">
           <div class="ltr"><span class="frac"><span class="num">۷</span><span class="den">۹</span></span> در مقابل <span class="frac"><span class="num">۵</span><span class="den">۶</span></span></div>
           <div class="ltr">۷×۶=۴۲ &nbsp;در مقابل&nbsp; ۵×۹=۴۵</div>
@@ -748,8 +750,8 @@
         <span class="card-label">مثال ۴ — تخمین برای قیاس رادیکال</span>
         <h3>مقایسهٔ √۷۰ و ۸٫۵</h3>
         <div class="steps">
-          <div class="ltr">۸² = ۶۴ &nbsp;و&nbsp; ۹² = ۸۱ &nbsp;⇒&nbsp; ۸ &lt; √۷۰ &lt; ۹</div>
-          <div class="ltr">حالا دقیق‌تر: ۸٫۵² = ۷۲٫۲۵</div>
+          <div class="ltr">۸<sup>۲</sup> = ۶۴ &nbsp;و&nbsp; ۹<sup>۲</sup> = ۸۱ &nbsp;⇒&nbsp; ۸ &lt; √۷۰ &lt; ۹</div>
+          <div class="ltr">حالا دقیق‌تر: ۸٫۵<sup>۲</sup> = ۷۲٫۲۵</div>
           <div class="ltr">چون ۷۰ &lt; ۷۲٫۲۵ است</div>
         </div>
         <div class="result ltr">نتیجه: √۷۰ &lt; ۸٫۵</div>
@@ -797,7 +799,7 @@
         </details>
       </div>
       <div class="qitem">
-        <b class="qnum">۲</b>برای a = ¹⁄₉ کدام بزرگ‌تر است: a یا √a؟
+        <b class="qnum">۲</b>برای a = <sup>۱</sup>⁄₉ کدام بزرگ‌تر است: a یا √a؟
         <details><summary>نمایش پاسخ</summary>
           <div class="answer">
             <div class="line">چون ۰ &lt; a &lt; ۱ است، ریشه‌گرفتن عدد را بزرگ‌تر می‌کند.</div>
@@ -830,7 +832,7 @@
         <b class="qnum">۵</b>با تخمین بگو: √۱۲۰ از ۱۱ بزرگ‌تر است یا کوچک‌تر؟
         <details><summary>نمایش پاسخ</summary>
           <div class="answer">
-            <div class="line ltr">۱۱² = ۱۲۱</div>
+            <div class="line ltr">۱۱<sup>۲</sup> = ۱۲۱</div>
             <div class="line">چون ۱۲۰ &lt; ۱۲۱ است</div>
             <div class="line final ltr">پاسخ نهایی: √۱۲۰ &lt; ۱۱ (خیلی نزدیک به هم!)</div>
           </div>
@@ -900,15 +902,15 @@
           <div>۴۵ = ۳ × ۱۵</div>
           <div>۱۵ = ۳ × ۵</div>
         </div>
-        <div class="result">نتیجه: ۹۰ = ۲ × ۳² × ۵</div>
+        <div class="result">نتیجه: ۹۰ = ۲ × ۳<sup>۲</sup> × ۵</div>
       </div>
       <div class="card example">
         <span class="card-label">مثال ۴ (چالشی)</span>
         <h3>سادهٔ زیر رادیکال با کمک تجزیه</h3>
         <div class="steps">
           <div>می‌خواهیم √۹۰ را ساده کنیم.</div>
-          <div>از تجزیهٔ بالا: ۹۰ = ۲ × ۳² × ۵</div>
-          <div>√(۳²) از زیر رادیکال بیرون می‌آید</div>
+          <div>از تجزیهٔ بالا: ۹۰ = ۲ × ۳<sup>۲</sup> × ۵</div>
+          <div>√(۳<sup>۲</sup>) از زیر رادیکال بیرون می‌آید</div>
         </div>
         <div class="result">نتیجه: √۹۰ = ۳√۱۰</div>
       </div>
@@ -920,7 +922,7 @@
         <div>می‌خواهیم ۱۲۸ را به‌صورت توانی از ۲ بنویسیم.</div>
         <div>۱۲۸ = ۲×۲×۲×۲×۲×۲×۲ (هفت‌بار)</div>
       </div>
-      <div class="result">نتیجه: ۱۲۸ = ۲⁷</div>
+      <div class="result">نتیجه: ۱۲۸ = ۲<sup>۷</sup></div>
     </div>
 
     <div class="card mistake">
@@ -946,9 +948,9 @@
         <span class="card-label">مثال ۶</span>
         <h3>HCF و LCM اعداد ۲۴ و ۳۶</h3>
         <div class="steps">
-          <div>۲۴ = ۲³ × ۳ و ۳۶ = ۲² × ۳²</div>
-          <div>HCF: توان کوچک‌تر هر عامل → ۲² × ۳ = ۱۲</div>
-          <div>LCM: توان بزرگ‌تر هر عامل → ۲³ × ۳² = ۷۲</div>
+          <div>۲۴ = ۲<sup>۳</sup> × ۳ و ۳۶ = ۲<sup>۲</sup> × ۳<sup>۲</sup></div>
+          <div>HCF: توان کوچک‌تر هر عامل → ۲<sup>۲</sup> × ۳ = ۱۲</div>
+          <div>LCM: توان بزرگ‌تر هر عامل → ۲<sup>۳</sup> × ۳<sup>۲</sup> = ۷۲</div>
         </div>
         <div class="result">نتیجه: HCF=۱۲ ، LCM=۷۲</div>
       </div>
@@ -958,7 +960,7 @@
         <div class="steps">
           <div>سؤال: چراغ A هر ۴ ثانیه و چراغ B هر ۶ ثانیه چشمک می‌زند. بعد از چند ثانیه دوباره هم‌زمان چشمک می‌زنند؟</div>
           <div>باید کوچک‌ترین زمانی را پیدا کنیم که مضرب مشترک هر دو باشد → LCM(۴,۶)</div>
-          <div>۴=۲² ، ۶=۲×۳ → LCM = ۲²×۳ = ۱۲</div>
+          <div>۴=۲<sup>۲</sup> ، ۶=۲×۳ → LCM = ۲<sup>۲</sup>×۳ = ۱۲</div>
         </div>
         <div class="result">نتیجه: بعد از ۱۲ ثانیه دوباره هم‌زمان چشمک می‌زنند</div>
       </div>
@@ -980,7 +982,7 @@
         <details><summary>نمایش پاسخ</summary>
           <div class="answer">
             <div class="line">۱۴۰ = ۲ × ۷۰ = ۲ × ۲ × ۳۵ = ۲ × ۲ × ۵ × ۷</div>
-            <div class="line final">پاسخ نهایی: ۱۴۰ = ۲² × ۵ × ۷</div>
+            <div class="line final">پاسخ نهایی: ۱۴۰ = ۲<sup>۲</sup> × ۵ × ۷</div>
           </div>
         </details>
       </div>
@@ -988,8 +990,8 @@
         <b class="qnum">۲</b>HCF(۱۶, ۴۰) چیست؟
         <details><summary>نمایش پاسخ</summary>
           <div class="answer">
-            <div class="line">۱۶ = ۲⁴ و ۴۰ = ۲³ × ۵</div>
-            <div class="line">عامل مشترک با توان کوچک‌تر: ۲³ = ۸</div>
+            <div class="line">۱۶ = ۲<sup>۴</sup> و ۴۰ = ۲<sup>۳</sup> × ۵</div>
+            <div class="line">عامل مشترک با توان کوچک‌تر: ۲<sup>۳</sup> = ۸</div>
             <div class="line final">پاسخ نهایی: HCF = ۸</div>
           </div>
         </details>
@@ -998,8 +1000,8 @@
         <b class="qnum">۳</b>LCM(۹, ۱۲) چیست؟
         <details><summary>نمایش پاسخ</summary>
           <div class="answer">
-            <div class="line">۹ = ۳² و ۱۲ = ۲² × ۳</div>
-            <div class="line">توان بزرگ‌تر هر عامل: ۲² × ۳² = ۳۶</div>
+            <div class="line">۹ = ۳<sup>۲</sup> و ۱۲ = ۲<sup>۲</sup> × ۳</div>
+            <div class="line">توان بزرگ‌تر هر عامل: ۲<sup>۲</sup> × ۳<sup>۲</sup> = ۳۶</div>
             <div class="line final">پاسخ نهایی: LCM = ۳۶</div>
           </div>
         </details>
@@ -1007,832 +1009,11 @@
     </div>
   </section>
 
-  <!-- ===================== SECTION 4 : قوانین توان ===================== -->
-  <section class="section" id="s4">
-    <div class="sec-head">
-      <div class="sec-num" style="background:var(--navy);">۵</div>
-      <div><span class="kicker">بخش پنجم</span><h2>قوانین پایهٔ توان‌ها (۷ قانون طلایی)</h2></div>
-    </div>
-    <div class="sec-intro">
-      این هفت قانون، ستون فقرات جبر هستند. باید بتونی بدون نگاه‌کردن به کتاب، هرکدوم رو بنویسی. برای هرکدوم سه مثال متنوع آوردیم تا کاملاً جا بیفتن.
-    </div>
-
-    <div class="card concept">
-      <span class="card-label">قانون ۱</span>
-      <h3>ضرب توان‌های هم‌پایه</h3>
-      <div class="formula">aᵐ × aⁿ = aᵐ⁺ⁿ</div>
-      <p>وقتی پایه‌ها یکسانند، توان‌ها را <b>جمع</b> می‌کنیم.</p>
-      <ul>
-        <li>مثال ۱: ۲³ × ۲⁴ = ۲⁷ = ۱۲۸</li>
-        <li>مثال ۲: x⁵ × x² = x⁷</li>
-        <li>مثال ۳: (−۳)² × (−۳)³ = (−۳)⁵ = −۲۴۳</li>
-      </ul>
-    </div>
-
-    <div class="card concept">
-      <span class="card-label">قانون ۲</span>
-      <h3>تقسیم توان‌های هم‌پایه</h3>
-      <div class="formula">aᵐ ÷ aⁿ = aᵐ⁻ⁿ</div>
-      <p>وقتی پایه‌ها یکسانند، توان‌ها را <b>کم</b> می‌کنیم.</p>
-      <ul>
-        <li>مثال ۱: ۵⁶ ÷ ۵² = ۵⁴ = ۶۲۵</li>
-        <li>مثال ۲: x⁹ ÷ x⁴ = x⁵</li>
-        <li>مثال ۳: ۷³ ÷ ۷³ = ۷⁰ = ۱ (پل ورود به قانون بعدی!)</li>
-      </ul>
-    </div>
-
-    <div class="card concept">
-      <span class="card-label">قانون ۳</span>
-      <h3>توان صفر</h3>
-      <div class="formula">a⁰ = 1  (به‌شرط a ≠ ۰)</div>
-      <p>هر عدد غیرصفر به توان صفر همیشه برابر ۱ است.</p>
-      <ul>
-        <li>مثال ۱: ۱۰۰⁰ = ۱</li>
-        <li>مثال ۲: (−۷)⁰ = ۱</li>
-        <li>مثال ۳: (۲x)⁰ = ۱ (به‌شرط x≠۰)</li>
-      </ul>
-    </div>
-
-    <div class="card concept">
-      <span class="card-label">قانون ۴</span>
-      <h3>توان یک</h3>
-      <div class="formula">a¹ = a</div>
-      <p>هر عددی به توان ۱ همان خودش است — ساده، ولی جای فراموشی در محاسبات چندمرحله‌ای دارد.</p>
-      <ul>
-        <li>مثال ۱: ۱۲¹ = ۱۲</li>
-        <li>مثال ۲: (x+۳)¹ = x+۳</li>
-        <li>مثال ۳: ۵³ ÷ ۵² = ۵¹ = ۵</li>
-      </ul>
-    </div>
-
-    <div class="card concept">
-      <span class="card-label">قانون ۵</span>
-      <h3>توانِ توان</h3>
-      <div class="formula">(aᵐ)ⁿ = aᵐˣⁿ</div>
-      <p>وقتی توانی خودش به توان دیگری می‌رود، توان‌ها را <b>ضرب</b> می‌کنیم (نه جمع!).</p>
-      <ul>
-        <li>مثال ۱: (۵³)² = ۵⁶ = ۱۵٬۶۲۵</li>
-        <li>مثال ۲: (x²)⁴ = x⁸</li>
-        <li>مثال ۳: (۲²)³ = ۲⁶ = ۶۴</li>
-      </ul>
-    </div>
-
-    <div class="card concept">
-      <span class="card-label">قانون ۶</span>
-      <h3>توزیع توان در ضرب و تقسیم</h3>
-      <div class="formula">(ab)ⁿ = aⁿ×bⁿ  و  (a/b)ⁿ = aⁿ/bⁿ</div>
-      <p>توان روی هر عامل داخل پرانتز به‌طور جداگانه پخش می‌شود.</p>
-      <ul>
-        <li>مثال ۱: (۲×۳)² = ۲²×۳² = ۴×۹ = ۳۶</li>
-        <li>مثال ۲: (x/۲)³ = x³/۸</li>
-        <li>مثال ۳: (۲a b)² = ۴a²b²</li>
-      </ul>
-    </div>
-
-    <div class="card concept">
-      <span class="card-label">قانون ۷</span>
-      <h3>توان منفی (معکوس‌کننده)</h3>
-      <div class="formula">a⁻¹ = 1/a  و  (a/b)⁻ⁿ = (b/a)ⁿ</div>
-      <p>توان منفی فقط عدد را «معکوس» می‌کند؛ خود عدد را منفی نمی‌کند!</p>
-      <ul>
-        <li>مثال ۱: ۲⁻⁴ = ۱/۲⁴ = ۱/۱۶</li>
-        <li>مثال ۲: (۲/۵)⁻² = (۵/۲)² = ۲۵/۴</li>
-        <li>مثال ۳: ۳⁻¹ + ۲⁻¹ = ۱/۳ + ۱/۲ = ۵/۶</li>
-      </ul>
-    </div>
-
-    <div class="card mistake">
-      <span class="card-label">اشتباهات پرتکرار</span>
-      <ul>
-        <li>جمع پایه‌ها: ۲⁵ + ۲³ ≠ ۲⁸ — قوانین ضرب/تقسیم فقط وقتی کار می‌کنند که واقعاً ضرب یا تقسیم داشته باشیم، نه جمع!</li>
-        <li>در (aᵐ)ⁿ توان‌ها ضرب می‌شوند نه جمع.</li>
-        <li>توان منفی را با منفی‌شدن خود عدد اشتباه نگیر: ۲⁻³ = ۱/۸ است، نه −۸.</li>
-        <li>دقت کن: (−۵)² = ۲۵ ولی −۵² = −۲۵ (پرانتز همه‌چیز را عوض می‌کند!)</li>
-      </ul>
-    </div>
-
-    <div class="card examtip">
-      <span class="card-label">نکات امتحانی</span>
-      <ul>
-        <li>هر هفت قانون را باید بدون نگاه‌کردن به کتاب، در چند ثانیه بنویسی.</li>
-        <li>توان منفی و کسری را بتوانی سریع بین فرم توانی و رادیکالی جابه‌جا کنی.</li>
-        <li>همیشه اول پرانتزها را چک کن؛ محل پرانتز، تعیین‌کنندهٔ علامت نهایی است.</li>
-      </ul>
-    </div>
-
-    <div class="card practice">
-      <span class="card-label">تمرین این بخش</span>
-      <div class="qitem">
-        <b class="qnum">۱</b>عبارت (۳²)³ × ۳⁻۴ را ساده کن.
-        <details><summary>نمایش پاسخ</summary>
-          <div class="answer">
-            <div class="line">(۳²)³ = ۳⁶ (قانون ۵: توان‌ها ضرب می‌شوند)</div>
-            <div class="line">۳⁶ × ۳⁻⁴ = ۳⁶⁻⁴ = ۳² (قانون ۱: توان‌ها جمع می‌شوند)</div>
-            <div class="line final">پاسخ نهایی: ۳² = ۹</div>
-          </div>
-        </details>
-      </div>
-      <div class="qitem">
-        <b class="qnum">۲</b>عبارت (x/y)⁻³ × (x/y)⁵ را ساده کن.
-        <details><summary>نمایش پاسخ</summary>
-          <div class="answer">
-            <div class="line">پایه‌ها یکسان‌اند (x/y)، پس توان‌ها را جمع می‌کنیم.</div>
-            <div class="line">−۳ + ۵ = ۲</div>
-            <div class="line final">پاسخ نهایی: (x/y)²</div>
-          </div>
-        </details>
-      </div>
-      <div class="qitem">
-        <b class="qnum">۳</b>حاصل ۲⁻¹ + ۴⁻¹ چقدر است؟
-        <details><summary>نمایش پاسخ</summary>
-          <div class="answer">
-            <div class="line">۲⁻¹ = ۱/۲ و ۴⁻¹ = ۱/۴</div>
-            <div class="line">مخرج مشترک ۴: ۱/۲ = ۲/۴</div>
-            <div class="line">۲/۴ + ۱/۴ = ۳/۴</div>
-            <div class="line final">پاسخ نهایی: ۳/۴</div>
-          </div>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== SECTION 5 : رادیکال‌ها ===================== -->
-  <section class="section" id="s5">
-    <div class="sec-head">
-      <div class="sec-num" style="background:var(--blue);">۶</div>
-      <div><span class="kicker">بخش ششم</span><h2>ریشه‌ها و رادیکال‌ها: ضرب، تقسیم و ساده‌سازی</h2></div>
-    </div>
-
-    <div class="card concept">
-      <span class="card-label">مفاهیم اصلی</span>
-      <h3>ضرب و تقسیم رادیکال‌های هم‌فرجه</h3>
-      <div class="formula">ⁿ√a × ⁿ√b = ⁿ√(a×b)   و   ⁿ√a ÷ ⁿ√b = ⁿ√(a/b)</div>
-      <p>این قانون فقط وقتی مستقیم کار می‌کند که فرجهٔ (اندیس) دو رادیکال یکسان باشد. جمع و تفریق رادیکال از این قانون پیروی <b>نمی‌کند</b>: ⁿ√a + ⁿ√b ≠ ⁿ√(a+b)</p>
-    </div>
-    <div class="grid2">
-      <div class="card example">
-        <span class="card-label">مثال ۱</span>
-        <h3>ضرب رادیکال‌های هم‌فرجه</h3>
-        <div class="steps">
-          <div>∛۴ × ∛۳ = ∛(۴×۳) = ∛۱۲</div>
-        </div>
-        <div class="result">نتیجه: ∛۱۲</div>
-      </div>
-      <div class="card example">
-        <span class="card-label">مثال ۲</span>
-        <h3>تقسیم رادیکال‌های هم‌فرجه</h3>
-        <div class="steps">
-          <div>√۵۰ ÷ √۲ = √(۵۰/۲) = √۲۵</div>
-        </div>
-        <div class="result">نتیجه: ۵</div>
-      </div>
-    </div>
-    <div class="card example">
-      <span class="card-label">مثال ۳ (چالشی)</span>
-      <h3>ضرب رادیکال‌های ناهم‌فرجه</h3>
-      <div class="steps">
-        <div>می‌خواهیم ∛۵ × √۵ را ساده کنیم؛ فرجه‌ها فرق دارند (۳ و ۲).</div>
-        <div>ابتدا فرجه‌ها را با LCM هم‌سان می‌کنیم: LCM(۲,۳)=۶</div>
-        <div>∛۵ = ⁶√(۵²) = ⁶√۲۵  و  √۵ = ⁶√(۵³) = ⁶√۱۲۵</div>
-        <div>حالا می‌توان ضرب کرد: ⁶√(۲۵×۱۲۵) = ⁶√۳۱۲۵</div>
-      </div>
-      <div class="result">نتیجه: ⁶√۳۱۲۵</div>
-    </div>
-
-    <div class="card concept">
-      <span class="card-label">مفاهیم اصلی</span>
-      <h3>سادهٔ توان و فرجه (وقتی هر دو مضرب مشترک دارند)</h3>
-      <div class="formula">ᵐⁿ√(aⁿ) = ᵐ√a</div>
-      <p>اگر توانِ زیر رادیکال و فرجهٔ رادیکال، مقسوم‌علیه مشترک داشته باشند، می‌توان هر دو را بر آن مقسوم‌علیه ساده کرد — دقیقاً مثل ساده‌کردن کسر.</p>
-    </div>
-    <div class="grid2">
-      <div class="card example">
-        <span class="card-label">مثال ۴</span>
-        <h3>سادهٔ فرجه و توان</h3>
-        <div class="steps">
-          <div>⁶√(۲⁴) → توان و فرجه هر دو بر ۲ بخش‌پذیرند</div>
-          <div>⁶√(۲⁴) = ³√(۲²)</div>
-        </div>
-        <div class="result">نتیجه: ³√۴</div>
-      </div>
-      <div class="card example">
-        <span class="card-label">مثال ۵</span>
-        <h3>سادهٔ فرجه و توان (عدد بزرگ‌تر)</h3>
-        <div class="steps">
-          <div>⁸√(x⁶) → توان و فرجه هر دو بر ۲ بخش‌پذیرند</div>
-          <div>⁸√(x⁶) = ⁴√(x³)</div>
-        </div>
-        <div class="result">نتیجه: ⁴√(x³)</div>
-      </div>
-    </div>
-
-    <div class="card concept">
-      <span class="card-label">مفاهیم اصلی</span>
-      <h3>بردن عدد به زیر رادیکال / خارج‌کردن از زیر رادیکال</h3>
-      <p>این قسمت دو حالت جدا دارد بسته به علامت a — دقت کن که کدام‌یک را استفاده می‌کنی:</p>
-      <table>
-        <tr><th>حالت</th><th>قاعده</th></tr>
-        <tr><td>a ≥ ۰ (مثبت یا صفر)</td><td>a·ⁿ√b = ⁿ√(aⁿ·b)</td></tr>
-        <tr><td>a &lt; ۰ و n زوج</td><td>a·ⁿ√b = −ⁿ√(aⁿ·b) &nbsp;(علامت منفی باید بیرون از رادیکال بماند)</td></tr>
-      </table>
-    </div>
-    <div class="grid2">
-      <div class="card example">
-        <span class="card-label">مثال ۶ (a مثبت)</span>
-        <h3>بردن عدد مثبت زیر رادیکال</h3>
-        <div class="steps">
-          <div>می‌خواهیم ۳√۵ را زیر یک رادیکال واحد ببریم.</div>
-          <div>۳√۵ = √(۳²×۵) = √(۹×۵)</div>
-        </div>
-        <div class="result">نتیجه: √۴۵</div>
-      </div>
-      <div class="card example">
-        <span class="card-label">مثال ۷ (a منفی)</span>
-        <h3>بردن عدد منفی زیر رادیکال</h3>
-        <div class="steps">
-          <div>می‌خواهیم −۲√۵ را زیر رادیکال ببریم (فرجه زوج است، پس علامت منفی بیرون می‌ماند).</div>
-          <div>−۲√۵ = −√(۲²×۵) = −√۲۰</div>
-        </div>
-        <div class="result">نتیجه: −√۲۰ (نه √۲۰ و نه −√(−۲۰) که اصلاً تعریف‌نشده است!)</div>
-      </div>
-    </div>
-    <div class="card example">
-      <span class="card-label">مثال ۸ (خارج‌کردن از رادیکال)</span>
-      <h3>خارج‌کردن عدد کامل از زیر رادیکال</h3>
-      <div class="steps">
-        <div>می‌خواهیم √۷۵ را ساده کنیم.</div>
-        <div>۷۵ = ۲۵ × ۳ و ۲۵ مربع کامل است.</div>
-        <div>√۷۵ = √۲۵ × √۳ = ۵√۳</div>
-      </div>
-      <div class="result">نتیجه: ۵√۳</div>
-    </div>
-
-    <div class="card concept">
-      <span class="card-label">مفاهیم اصلی</span>
-      <h3>فرجه‌های متوالی (رادیکال توی رادیکال)</h3>
-      <div class="formula">ᵐ√( ⁿ√( ᵖ√a ) ) = ᵐⁿᵖ√a</div>
-      <p>وقتی چند رادیکال تو در تو داریم، فرجه‌ها را در هم ضرب می‌کنیم و یک رادیکال واحد می‌سازیم.</p>
-    </div>
-    <div class="grid2">
-      <div class="card example">
-        <span class="card-label">مثال ۹</span>
-        <h3>ساده‌سازی فرجهٔ متوالی</h3>
-        <div class="steps">
-          <div>√(∛(۴)) = فرجه‌ها را ضرب می‌کنیم: ۲×۳=۶</div>
-        </div>
-        <div class="result">نتیجه: ⁶√۴</div>
-      </div>
-      <div class="card example">
-        <span class="card-label">مثال ۱۰</span>
-        <h3>فرجهٔ متوالی سه‌لایه</h3>
-        <div class="steps">
-          <div>⁵√(∛(√a)) → فرجه‌ها: ۵ × ۳ × ۲ = ۳۰</div>
-        </div>
-        <div class="result">نتیجه: ³⁰√a</div>
-      </div>
-    </div>
-
-    <div class="card concept">
-      <span class="card-label">مفاهیم اصلی</span>
-      <h3>توان‌های گویا (رابطهٔ توان و ریشه)</h3>
-      <div class="formula">ᵐ√(aⁿ) = a^(n/m)   (به‌شرط a &gt; ۰)</div>
-      <p>ریشه همیشه در مخرج توان قرار می‌گیرد و توان زیرِ رادیکال در صورت.</p>
-    </div>
-    <div class="grid2">
-      <div class="card example">
-        <span class="card-label">مثال ۱۱</span>
-        <h3>تبدیل رادیکال به توان کسری</h3>
-        <div class="steps">
-          <div>∛(x²) → فرجه ۳ می‌رود مخرج، توان ۲ می‌رود صورت</div>
-        </div>
-        <div class="result">نتیجه: x^(۲/۳)</div>
-      </div>
-      <div class="card example">
-        <span class="card-label">مثال ۱۲</span>
-        <h3>تبدیل توان کسری به رادیکال</h3>
-        <div class="steps">
-          <div>۸^(۵/۳) → مخرج (۳) فرجهٔ رادیکال، صورت (۵) توان زیر رادیکال</div>
-        </div>
-        <div class="result">نتیجه: ∛(۸⁵) که با ساده‌سازی می‌شود ۲⁵ = ۳۲</div>
-      </div>
-    </div>
-
-    <div class="card mistake">
-      <span class="card-label">اشتباهات پرتکرار</span>
-      <ul>
-        <li>ⁿ√a + ⁿ√b هرگز برابر ⁿ√(a+b) نیست؛ فقط ضرب و تقسیم این قانون را دارند، نه جمع و تفریق.</li>
-        <li>وقتی a منفی و فرجه زوج است، عدد منفی هرگز زیر رادیکال نمی‌رود؛ همیشه بیرون از رادیکال باقی می‌ماند.</li>
-        <li>در ضرب رادیکال‌های ناهم‌فرجه، مستقیم زیر یک رادیکال جمعشان نکن — اول باید فرجه‌ها را با LCM یکسان کنی.</li>
-        <li>قبل از استفاده از قانون ریشه، همیشه چک کن عدد زیر رادیکال مربع/مکعب کامل هست یا نه.</li>
-      </ul>
-    </div>
-
-    <div class="card examtip">
-      <span class="card-label">نکات امتحانی</span>
-      <ul>
-        <li>سه قانون ضرب، تقسیم و توانِ توان رادیکال باید بدون نگاه‌کردن به کتاب نوشته شوند.</li>
-        <li>وقتی فرجه‌ها فرق دارند، اولین قدم همیشه یکسان‌سازی فرجه با LCM است.</li>
-        <li>توان منفی و کسری را بتوانی سریع بین فرم توانی و رادیکالی تبدیل کنی — این یکی از پرتکرارترین سؤال‌هاست.</li>
-      </ul>
-    </div>
-
-    <div class="card practice">
-      <span class="card-label">تمرین این بخش</span>
-      <div class="qitem">
-        <b class="qnum">۱</b>√۹۸ را ساده کن.
-        <details><summary>نمایش پاسخ</summary>
-          <div class="answer">
-            <div class="line">۹۸ = ۴۹ × ۲ و ۴۹ مربع کامل است.</div>
-            <div class="line">√۹۸ = √۴۹ × √۲ = ۷√۲</div>
-            <div class="line final">پاسخ نهایی: ۷√۲</div>
-          </div>
-        </details>
-      </div>
-      <div class="qitem">
-        <b class="qnum">۲</b>−۳√۲ را زیر یک رادیکال واحد ببر.
-        <details><summary>نمایش پاسخ</summary>
-          <div class="answer">
-            <div class="line">فرجه زوج است، پس علامت منفی بیرون می‌ماند.</div>
-            <div class="line">−۳√۲ = −√(۳²×۲) = −√۱۸</div>
-            <div class="line final">پاسخ نهایی: −√۱۸</div>
-          </div>
-        </details>
-      </div>
-      <div class="qitem">
-        <b class="qnum">۳</b>عبارت x^(۳/۴) را به فرم رادیکالی بنویس.
-        <details><summary>نمایش پاسخ</summary>
-          <div class="answer">
-            <div class="line">مخرج توان (۴) فرجهٔ رادیکال می‌شود.</div>
-            <div class="line">صورت توان (۳) زیر رادیکال می‌رود.</div>
-            <div class="line final">پاسخ نهایی: ⁴√(x³)</div>
-          </div>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== SECTION 6 : درصد ===================== -->
-  <section class="section" id="s6">
-    <div class="sec-head">
-      <div class="sec-num" style="background:var(--gold);">۷</div>
-      <div><span class="kicker">بخش هفتم</span><h2>درصدها: زبان تغییرات</h2></div>
-    </div>
-
-    <div class="card concept">
-      <span class="card-label">مفاهیم اصلی</span>
-      <h3>درصد یعنی «از ۱۰۰»</h3>
-      <p>٪۳۵ برابر است با ۰٫۳۵ یا ۳۵/۱۰۰. برای محاسبهٔ درصد تغییر (رشد یا افت)، همیشه مقدار تغییر را نسبت به مقدار <b>اولیه (Old)</b> می‌سنجیم.</p>
-      <div class="formula">Percentage Change = ((New − Old) / Old) × 100</div>
-    </div>
-
-    <div class="grid2">
-      <div class="card example">
-        <span class="card-label">مثال ۱ — تورم (افزایش قیمت)</span>
-        <h3>قیمت از ۸۰۰ به ۹۲۰ تومان رسیده</h3>
-        <div class="steps">
-          <div>تغییر = ۹۲۰ − ۸۰۰ = ۱۲۰</div>
-          <div>۱۲۰ ÷ ۸۰۰ = ۰٫۱۵</div>
-          <div>۰٫۱۵ × ۱۰۰ = ٪۱۵</div>
-        </div>
-        <div class="result">نتیجه: ٪۱۵ افزایش (تورم)</div>
-      </div>
-      <div class="card example">
-        <span class="card-label">مثال ۲ — تخفیف (کاهش قیمت)</span>
-        <h3>قیمت از ۲۵۰ به ۲۰۰ هزار تومان رسیده</h3>
-        <div class="steps">
-          <div>تغییر = ۲۰۰ − ۲۵۰ = −۵۰</div>
-          <div>۵۰ ÷ ۲۵۰ = ۰٫۲</div>
-          <div>۰٫۲ × ۱۰۰ = ٪۲۰</div>
-        </div>
-        <div class="result">نتیجه: ٪۲۰ کاهش (تخفیف)</div>
-      </div>
-    </div>
-    <div class="card example">
-      <span class="card-label">مثال ۳ — محاسبهٔ قیمت جدید از روی درصد</span>
-      <h3>یک کالای ۴۰۰ هزار تومانی، ٪۱۲ تخفیف خورده؛ قیمت جدید چند است؟</h3>
-      <div class="steps">
-        <div>مقدار تخفیف = ۴۰۰٬۰۰۰ × ۰٫۱۲ = ۴۸٬۰۰۰</div>
-        <div>قیمت جدید = ۴۰۰٬۰۰۰ − ۴۸٬۰۰۰</div>
-      </div>
-      <div class="result">نتیجه: ۳۵۲٬۰۰۰ تومان</div>
-    </div>
-
-    <div class="card mistake">
-      <span class="card-label">اشتباهات پرتکرار</span>
-      <ul>
-        <li>مخرج Percentage Change همیشه مقدار Old (اولیه) است، نه New.</li>
-        <li>٪۳ را با ۰٫۳ اشتباه نگیر؛ ٪۳ = ۰٫۰۳ است.</li>
-        <li>درصد افزایش و مقدار افزایش یکی نیستند — یکی نسبی است، یکی مطلق.</li>
-        <li>اگر قیمتی ٪۲۰ بالا برود و بعد ٪۲۰ پایین بیاید، به قیمت اول برنمی‌گردیم! (چون مبنای درصد دوم عوض شده)</li>
-      </ul>
-    </div>
-
-    <div class="card examtip">
-      <span class="card-label">نکات امتحانی</span>
-      <ul>
-        <li>فرمول را با ترتیب New و Old حفظ کن — جابه‌جایی این دو، علامت جواب را برعکس می‌کند.</li>
-        <li>قبل از محاسبه، مشخص کن سؤال «مقدار تغییر» می‌خواهد یا «درصد تغییر».</li>
-        <li>برای تخفیف پشت‌سرهم (مثلاً ٪۱۰ و بعد ٪۱۰)، هربار روی مقدار جدید حساب کن، نه روی قیمت اصلی.</li>
-      </ul>
-    </div>
-
-    <div class="card practice">
-      <span class="card-label">تمرین این بخش</span>
-      <div class="qitem">
-        <b class="qnum">۱</b>قیمت ۱۸۰ به ۲۲۵ رسیده؛ درصد تغییر چقدر است؟
-        <details><summary>نمایش پاسخ</summary>
-          <div class="answer">
-            <div class="line">تغییر = ۲۲۵ − ۱۸۰ = ۴۵</div>
-            <div class="line">۴۵ ÷ ۱۸۰ = ۰٫۲۵</div>
-            <div class="line final">پاسخ نهایی: ٪۲۵ افزایش</div>
-          </div>
-        </details>
-      </div>
-      <div class="qitem">
-        <b class="qnum">۲</b>یک کالا ابتدا ٪۱۰ گران شد و بعد ٪۱۰ ارزان شد. آیا به قیمت اول برگشته؟ با عدد ۱۰۰ امتحان کن.
-        <details><summary>نمایش پاسخ</summary>
-          <div class="answer">
-            <div class="line">قیمت اول ۱۰۰؛ بعد از ٪۱۰ افزایش → ۱۱۰</div>
-            <div class="line">بعد از ٪۱۰ کاهش روی ۱۱۰ → ۱۱۰ − ۱۱ = ۹۹</div>
-            <div class="line final">پاسخ نهایی: نه، به ۹۹ می‌رسیم نه ۱۰۰ — چون مبنای درصد دوم عوض شده</div>
-          </div>
-        </details>
-      </div>
-      <div class="qitem">
-        <b class="qnum">۳</b>٪۴۵ را به کسر ساده تبدیل کن.
-        <details><summary>نمایش پاسخ</summary>
-          <div class="answer">
-            <div class="line">٪۴۵ = ۴۵/۱۰۰</div>
-            <div class="line">HCF(۴۵,۱۰۰)=۵ → صورت و مخرج را بر ۵ ساده می‌کنیم</div>
-            <div class="line final">پاسخ نهایی: ۹/۲۰</div>
-          </div>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== SECTION 7 : ترتیب عملیات ===================== -->
-  <section class="section" id="s7">
-    <div class="sec-head">
-      <div class="sec-num" style="background:var(--red);">۸</div>
-      <div><span class="kicker">بخش هشتم</span><h2>ترتیب عملیات (BODMAS/PEMDAS)</h2></div>
-    </div>
-
-    <div class="card concept">
-      <span class="card-label">مفاهیم اصلی</span>
-      <h3>ترتیب اجرای عملیات</h3>
-      <div class="badge-row">
-        <span class="pill" style="background:var(--blue);">۱. پرانتزها</span>
-        <span class="pill" style="background:var(--green);">۲. توان و ریشه</span>
-        <span class="pill" style="background:var(--gold);">۳. ضرب و تقسیم (چپ به راست)</span>
-        <span class="pill" style="background:var(--red);">۴. جمع و تفریق (چپ به راست)</span>
-      </div>
-      <p>هرجا دو عملیات هم‌رتبه (مثلاً دو تا ضرب و تقسیم) کنار هم بودند، از چپ به راست پیش می‌روی.</p>
-    </div>
-
-    <div class="grid2">
-      <div class="card example">
-        <span class="card-label">مثال ۱</span>
-        <h3>ترکیب ضرب و جمع</h3>
-        <div class="steps">
-          <div>۲ + ۳ × ۴</div>
-          <div>اول ضرب: ۳×۴ = ۱۲</div>
-          <div>بعد جمع: ۱۲ + ۲ = ۱۴</div>
-        </div>
-        <div class="result">نتیجه: ۱۴</div>
-      </div>
-      <div class="card example">
-        <span class="card-label">مثال ۲</span>
-        <h3>پرانتز تو در تو</h3>
-        <div class="steps">
-          <div>۳ − (۲ − (۱−۶) − ۳) + ۴</div>
-          <div>داخلی‌ترین پرانتز: ۱−۶ = −۵</div>
-          <div>۲ − (−۵) − ۳ = ۲+۵−۳ = ۴</div>
-          <div>۳ − ۴ + ۴ = ۳</div>
-        </div>
-        <div class="result">نتیجه: ۳</div>
-      </div>
-    </div>
-    <div class="card example">
-      <span class="card-label">مثال ۳</span>
-      <h3>ترکیب توان، پرانتز و ضرب</h3>
-      <div class="steps">
-        <div>۱ + (۳×۲۲−۲) − ۳) + ۵×۲²</div>
-        <div>ابتدا توان: ۲² = ۴، پس ۳×۴−۲=۱۰</div>
-        <div>حالا پرانتز خارجی: ۱۰−۳=۷ → ۱ + ۷ = ۸</div>
-        <div>۵ × ۲² = ۵×۴=۲۰</div>
-        <div>۸ + ۲۰</div>
-      </div>
-      <div class="result">نتیجه: ۲۸</div>
-    </div>
-
-    <div class="card mistake">
-      <span class="card-label">اشتباهات پرتکرار</span>
-      <ul>
-        <li>در ۲+۳×۴، هرگز جمع را قبل از ضرب انجام نده!</li>
-        <li>توان و ریشه، قبل از ضرب و تقسیم اجرا می‌شوند نه بعدش.</li>
-        <li>در پرانتزهای تو در تو، همیشه از داخلی‌ترین پرانتز شروع کن.</li>
-      </ul>
-    </div>
-
-    <div class="card examtip">
-      <span class="card-label">نکات امتحانی</span>
-      <ul>
-        <li>BODMAS را در هر عبارت چندعملیاتی، قبل از هر محاسبه‌ای، روی کاغذ پیاده کن.</li>
-        <li>در عبارت‌های طولانی، هر مرحله را زیر مرحلهٔ قبل بنویس تا اشتباه کپی‌کردن رخ ندهد.</li>
-      </ul>
-    </div>
-
-    <div class="card practice">
-      <span class="card-label">تمرین این بخش</span>
-      <div class="qitem">
-        <b class="qnum">۱</b>عبارت ۲×۳² − ۱۲÷۴ را حساب کن.
-        <details><summary>نمایش پاسخ</summary>
-          <div class="answer">
-            <div class="line">توان: ۳²=۹ → ۲×۹=۱۸</div>
-            <div class="line">تقسیم: ۱۲÷۴=۳</div>
-            <div class="line">۱۸−۳=۱۵</div>
-            <div class="line final">پاسخ نهایی: ۱۵</div>
-          </div>
-        </details>
-      </div>
-      <div class="qitem">
-        <b class="qnum">۲</b>عبارت (۵−۲)² × ۲ + ۱ را حساب کن.
-        <details><summary>نمایش پاسخ</summary>
-          <div class="answer">
-            <div class="line">پرانتز: ۵−۲=۳</div>
-            <div class="line">توان: ۳²=۹</div>
-            <div class="line">۹×۲=۱۸ ، سپس ۱۸+۱=۱۹</div>
-            <div class="line final">پاسخ نهایی: ۱۹</div>
-          </div>
-        </details>
-      </div>
-      <div class="qitem">
-        <b class="qnum">۳</b>عبارت ۲۰ ÷ (۴−۲) × ۳ را حساب کن.
-        <details><summary>نمایش پاسخ</summary>
-          <div class="answer">
-            <div class="line">پرانتز: ۴−۲=۲</div>
-            <div class="line">۲۰÷۲=۱۰ (تقسیم و ضرب هم‌رتبه‌اند، از چپ به راست)</div>
-            <div class="line">۱۰×۳=۳۰</div>
-            <div class="line final">پاسخ نهایی: ۳۰</div>
-          </div>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== SECTION 8 : جملات هم‌نوع ===================== -->
-  <section class="section" id="s8">
-    <div class="sec-head">
-      <div class="sec-num" style="background:var(--purple);">۹</div>
-      <div><span class="kicker">بخش نهم</span><h2>ترکیب جملات هم‌نوع (Like Terms)</h2></div>
-    </div>
-
-    <div class="card concept">
-      <span class="card-label">مفاهیم اصلی</span>
-      <h3>چه جملاتی هم‌نوع‌اند؟</h3>
-      <p>فقط جملاتی که <b>متغیر و توان</b> آن‌ها دقیقاً یکسان است می‌توانند با هم جمع یا تفریق شوند — ضریب‌ها اهمیتی ندارد.</p>
-    </div>
-
-    <div class="grid2">
-      <div class="card example">
-        <span class="card-label">مثال ۱</span>
-        <h3>جملات هم‌نوع</h3>
-        <div class="steps">
-          <div>۳x + ۵x → متغیر یکسان (x)، توان یکسان (۱)</div>
-        </div>
-        <div class="result">نتیجه: ۸x</div>
-      </div>
-      <div class="card example">
-        <span class="card-label">مثال ۲</span>
-        <h3>ترکیب چند جملهٔ هم‌نوع</h3>
-        <div class="steps">
-          <div>۷x² − ۲x + ۴x² + ۵x</div>
-          <div>جملات x²: ۷x²+۴x²=۱۱x²</div>
-          <div>جملات x: −۲x+۵x=۳x</div>
-        </div>
-        <div class="result">نتیجه: ۱۱x² + ۳x</div>
-      </div>
-    </div>
-    <div class="card example">
-      <span class="card-label">مثال ۳</span>
-      <h3>جملات ناهم‌نوع (نمی‌شود ساده کرد)</h3>
-      <div class="steps">
-        <div>۴xy + ۳x²y − ۲xy</div>
-        <div>فقط ۴xy و −۲xy هم‌نوع‌اند (چون هر دو xy هستند، نه x²y)</div>
-        <div>۴xy − ۲xy = ۲xy</div>
-      </div>
-      <div class="result">نتیجه: ۲xy + ۳x²y (این دو جمله دیگر باهم ترکیب نمی‌شوند)</div>
-    </div>
-
-    <div class="card mistake">
-      <span class="card-label">اشتباهات پرتکرار</span>
-      <ul>
-        <li>۳x + ۵x² هرگز برابر ۸x³ نیست — این دو جمله اصلاً هم‌نوع نیستند (توان‌ها یکی نیست).</li>
-        <li>3x و 3x² را با هم اشتباه نگیر؛ اختلاف فقط در توان، کل ماهیت جمله را عوض می‌کند.</li>
-        <li>در سادهٔ عبارت‌های چندجمله‌ای، همیشه اول زیر جملات هم‌نوع را با رنگ یا شکل مشخص کن تا گم نشوی.</li>
-      </ul>
-    </div>
-
-    <div class="card examtip">
-      <span class="card-label">نکات امتحانی</span>
-      <ul>
-        <li>قبل از سادهٔ هر عبارت طولانی، زیر جملات هم‌نوع خط رنگی یا زیگزاگ بکش.</li>
-        <li>در سؤال‌های چندگزینه‌ای، معمولاً یک گزینه دقیقاً همین دام «جمع توان به‌جای جمع ضریب» را دارد.</li>
-      </ul>
-    </div>
-
-    <div class="card practice">
-      <span class="card-label">تمرین این بخش</span>
-      <div class="qitem">
-        <b class="qnum">۱</b>عبارت ۹a − ۴b + ۲a + ۷b را ساده کن.
-        <details><summary>نمایش پاسخ</summary>
-          <div class="answer">
-            <div class="line">جملات a: ۹a+۲a=۱۱a</div>
-            <div class="line">جملات b: −۴b+۷b=۳b</div>
-            <div class="line final">پاسخ نهایی: ۱۱a + ۳b</div>
-          </div>
-        </details>
-      </div>
-      <div class="qitem">
-        <b class="qnum">۲</b>عبارت ۵x² + ۲x − x² + ۳ را ساده کن.
-        <details><summary>نمایش پاسخ</summary>
-          <div class="answer">
-            <div class="line">جملات x²: ۵x²−x²=۴x²</div>
-            <div class="line">جملهٔ x (فقط یکی است): ۲x</div>
-            <div class="line">عدد ثابت: ۳</div>
-            <div class="line final">پاسخ نهایی: ۴x² + ۲x + ۳</div>
-          </div>
-        </details>
-      </div>
-      <div class="qitem">
-        <b class="qnum">۳</b>آیا ۶xy² و ۶x²y هم‌نوع‌اند؟ چرا؟
-        <details><summary>نمایش پاسخ</summary>
-          <div class="answer">
-            <div class="line">در ۶xy²، توان y برابر ۲ و توان x برابر ۱ است.</div>
-            <div class="line">در ۶x²y، توان x برابر ۲ و توان y برابر ۱ است.</div>
-            <div class="line final">پاسخ نهایی: نه، هم‌نوع نیستند — چون توزیع توان بین متغیرها متفاوت است</div>
-          </div>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== SECTION 9 : اتحادها ===================== -->
-  <section class="section" id="s9">
-    <div class="sec-head">
-      <div class="sec-num" style="background:var(--green);">۱۰</div>
-      <div><span class="kicker">بخش دهم</span><h2>اتحادهای جبری و فاکتورگیری</h2></div>
-    </div>
-
-    <div class="card concept">
-      <span class="card-label">مفاهیم اصلی</span>
-      <h3>جدول اتحادهای پرکاربرد</h3>
-      <table>
-        <tr><th>نام</th><th>فرمول</th><th>مثال</th></tr>
-        <tr><td>مربع دوجمله‌ای</td><td>(a±b)² = a²±۲ab+b²</td><td>(x+۳)² = x²+۶x+۹</td></tr>
-        <tr><td>مزدوج (تفاضل مربعات)</td><td>(a+b)(a−b) = a²−b²</td><td>(x+۵)(x−۵) = x²−۲۵</td></tr>
-        <tr><td>مربع سه‌جمله‌ای</td><td>(a+b+c)² = a²+b²+c²+۲ab+۲ac+۲bc</td><td>(x+y+۱)² = x²+y²+۱+۲xy+۲x+۲y</td></tr>
-        <tr><td>مکعب دوجمله‌ای</td><td>(a±b)³ = a³±۳a²b+۳ab²±b³</td><td>(x−۱)³ = x³−۳x²+۳x−۱</td></tr>
-        <tr><td>چاق و لاغر (مجموع/تفاضل مکعبات)</td><td>a³±b³ = (a±b)(a²∓ab+b²)</td><td>x³−۸ = (x−۲)(x²+۲x+۴)</td></tr>
-        <tr><td>جملهٔ مشترک</td><td>(x+a)(x+b) = x²+(a+b)x+ab</td><td>(x+۲)(x+۳) = x²+۵x+۶</td></tr>
-      </table>
-    </div>
-
-    <div class="card concept">
-      <span class="card-label">مفاهیم اصلی</span>
-      <h3>راهبردهای فاکتورگیری (تجزیه)</h3>
-      <ol>
-        <li><b>دسته‌بندی و فاکتورگیری:</b> عبارت را طوری دسته‌بندی می‌کنیم که یک پرانتز یکسان در همه‌جا ظاهر شود.</li>
-        <li><b>عکس اتحاد مزدوج:</b> اگر عبارت به‌شکل a²−b² بود، مستقیم به (a−b)(a+b) تبدیل می‌شود.</li>
-        <li><b>عکس چاق و لاغر:</b> اگر عبارت به‌شکل a³±b³ بود (هر دو توان مضرب ۳)، از فرمول چاق‌ولاغر استفاده می‌کنیم.</li>
-      </ol>
-    </div>
-
-    <div class="grid2">
-      <div class="card example">
-        <span class="card-label">مثال ۱ — دسته‌بندی</span>
-        <h3>فاکتورگیری با شکستن جمله</h3>
-        <div class="steps">
-          <div>۲x² + ۷x + ۳</div>
-          <div>۷x را می‌شکنیم به ۶x + x: ۲x²+۶x+x+۳</div>
-          <div>دسته‌بندی: ۲x(x+۳) + ۱(x+۳)</div>
-        </div>
-        <div class="result">نتیجه: (۲x+۱)(x+۳)</div>
-      </div>
-      <div class="card example">
-        <span class="card-label">مثال ۲ — عکس مزدوج</span>
-        <h3>فاکتورگیری تفاضل مربعات</h3>
-        <div class="steps">
-          <div>x² − ۴۹</div>
-          <div>۴۹ = ۷²</div>
-        </div>
-        <div class="result">نتیجه: (x−۷)(x+۷)</div>
-      </div>
-    </div>
-    <div class="card example">
-      <span class="card-label">مثال ۳ — عکس چاق و لاغر</span>
-      <h3>فاکتورگیری مجموع مکعبات</h3>
-      <div class="steps">
-        <div>x³ + ۲۷</div>
-        <div>۲۷ = ۳³</div>
-        <div>از فرمول a³+b³=(a+b)(a²−ab+b²) استفاده می‌کنیم</div>
-      </div>
-      <div class="result">نتیجه: (x+۳)(x²−۳x+۹)</div>
-    </div>
-
-    <div class="card concept">
-      <span class="card-label">مفاهیم اصلی</span>
-      <h3>گویا کردن مخرج کسر</h3>
-      <p>هدف این است که رادیکال از مخرج بیرون برود. برای این کار، صورت و مخرج را در «یار مناسب» ضرب می‌کنیم:</p>
-      <table>
-        <tr><th>فرم مخرج</th><th>روش گویاسازی</th></tr>
-        <tr><td>√a</td><td>صورت و مخرج را در √a ضرب کن</td></tr>
-        <tr><td>ⁿ√(aᵏ) با k&lt;n</td><td>در ⁿ√(aⁿ⁻ᵏ) ضرب کن تا توان زیر رادیکال به n برسد</td></tr>
-        <tr><td>√a ± √b (مزدوج)</td><td>در مزدوج آن یعنی √a ∓ √b ضرب کن</td></tr>
-      </table>
-    </div>
-    <div class="grid2">
-      <div class="card example">
-        <span class="card-label">مثال ۴</span>
-        <h3>گویاسازی مخرج ساده</h3>
-        <div class="steps">
-          <div>۳/√۷ را در √۷/√۷ ضرب می‌کنیم</div>
-          <div>(۳×√۷) / (√۷×√۷) = ۳√۷/۷</div>
-        </div>
-        <div class="result">نتیجه: ۳√۷ / ۷</div>
-      </div>
-      <div class="card example">
-        <span class="card-label">مثال ۵</span>
-        <h3>گویاسازی مخرج با مزدوج</h3>
-        <div class="steps">
-          <div>۲/(√۵−۱) را در مزدوج مخرج یعنی (√۵+۱) ضرب می‌کنیم</div>
-          <div>۲(√۵+۱) / ((√۵)²−۱²) = ۲(√۵+۱)/۴</div>
-        </div>
-        <div class="result">نتیجه: (√۵+۱)/۲</div>
-      </div>
-    </div>
-
-    <div class="card mistake">
-      <span class="card-label">اشتباهات پرتکرار</span>
-      <ul>
-        <li>فرمول a²−b² برای تفاضل دو مربع است، نه مجموع دو مربع — a²+b² اصلاً فاکتور نمی‌شود (با اعداد حقیقی).</li>
-        <li>در (a+b)/c، به‌اشتباه ننویس c/a + c/b؛ تجزیهٔ کسر فقط وقتی صورت جمع باشد، معتبر است: (a+b)/c = a/c + b/c، نه برعکس.</li>
-        <li>در Rational Expression هیچ‌وقت مخرج نباید صفر شود — همیشه شرط مخرج را چک کن.</li>
-        <li>در گویاسازی با مزدوج، فراموش نکن علامت وسط باید برعکس شود.</li>
-      </ul>
-    </div>
-
-    <div class="card examtip">
-      <span class="card-label">نکات امتحانی</span>
-      <ul>
-        <li>قبل از فاکتورگیری، همیشه اول دنبال عامل مشترک بین همهٔ جمله‌ها بگرد.</li>
-        <li>اگر توان‌ها هم زوج بودند و هم مضرب ۳ (مثل توان ۶)، اول از مزدوج استفاده کن، بعد از چاق‌ولاغر روی هرکدام از پرانتزها.</li>
-        <li>در گویاسازی، شکل مخرج (یک‌جمله‌ای، رادیکال با فرجهٔ بالاتر، یا دوجمله‌ای با رادیکال) روش را تعیین می‌کند.</li>
-      </ul>
-    </div>
-
-    <div class="card practice">
-      <span class="card-label">تمرین این بخش</span>
-      <div class="qitem">
-        <b class="qnum">۱</b>عبارت ۴x² − ۲۵ را تجزیه کن.
-        <details><summary>نمایش پاسخ</summary>
-          <div class="answer">
-            <div class="line">۴x² = (۲x)² و ۲۵=۵²</div>
-            <div class="line">این تفاضل دو مربع است.</div>
-            <div class="line final">پاسخ نهایی: (۲x−۵)(۲x+۵)</div>
-          </div>
-        </details>
-      </div>
-      <div class="qitem">
-        <b class="qnum">۲</b>عبارت (x−۴)² را باز کن.
-        <details><summary>نمایش پاسخ</summary>
-          <div class="answer">
-            <div class="line">از فرمول (a−b)²=a²−۲ab+b² استفاده می‌کنیم؛ a=x و b=۴</div>
-            <div class="line">x² − ۲(x)(۴) + ۴²</div>
-            <div class="line final">پاسخ نهایی: x² − ۸x + ۱۶</div>
-          </div>
-        </details>
-      </div>
-      <div class="qitem">
-        <b class="qnum">۳</b>مخرج کسر ۵/(√۳) را گویا کن.
-        <details><summary>نمایش پاسخ</summary>
-          <div class="answer">
-            <div class="line">صورت و مخرج را در √۳ ضرب می‌کنیم.</div>
-            <div class="line">(۵×√۳) / (√۳×√۳) = ۵√۳/۳</div>
-            <div class="line final">پاسخ نهایی: ۵√۳ / ۳</div>
-          </div>
-        </details>
-      </div>
-    </div>
-  </section>
-
-
   <!-- ===================== SECTION 11 : بخش‌پذیری اعداد ===================== -->
   <section class="section" id="s11">
     <div class="sec-head">
-      <div class="sec-num" style="background:var(--red);">۱۱</div>
-      <div><span class="kicker">بخش یازدهم</span><h2>بخش‌پذیری اعداد (Divisibility Rules)</h2></div>
+      <div class="sec-num" style="background:var(--red);">۵</div>
+      <div><span class="kicker">بخش پنجم</span><h2>بخش‌پذیری اعداد (Divisibility Rules)</h2></div>
     </div>
     <div class="sec-intro">
       این بخش کلید <b>سرعت</b> در امتحان است: به‌جای تقسیم‌کردن واقعی هر عدد، با نگاه‌کردن به چند رقم آخر یا مجموع ارقام، همان لحظه می‌فهمی یک عدد بر عدد دیگر بخش‌پذیر هست یا نه.
@@ -2009,6 +1190,869 @@
     </div>
   </section>
 
+  <!-- ===================== SECTION 6 : درصد ===================== -->
+  <section class="section" id="s6">
+    <div class="sec-head">
+      <div class="sec-num" style="background:var(--gold);">۶</div>
+      <div><span class="kicker">بخش ششم</span><h2>درصدها: زبان تغییرات</h2></div>
+    </div>
+
+    <div class="card concept">
+      <span class="card-label">مفاهیم اصلی</span>
+      <h3>درصد یعنی «از ۱۰۰»</h3>
+      <p>٪۳۵ برابر است با ۰٫۳۵ یا ۳۵/۱۰۰. برای محاسبهٔ درصد تغییر (رشد یا افت)، همیشه مقدار تغییر را نسبت به مقدار <b>اولیه (Old)</b> می‌سنجیم.</p>
+      <div class="formula">Percentage Change = ((New − Old) / Old) × 100</div>
+    </div>
+
+    <div class="grid2">
+      <div class="card example">
+        <span class="card-label">مثال ۱ — تورم (افزایش قیمت)</span>
+        <h3>قیمت از ۸۰۰ به ۹۲۰ تومان رسیده</h3>
+        <div class="steps">
+          <div>تغییر = ۹۲۰ − ۸۰۰ = ۱۲۰</div>
+          <div>۱۲۰ ÷ ۸۰۰ = ۰٫۱۵</div>
+          <div>۰٫۱۵ × ۱۰۰ = ٪۱۵</div>
+        </div>
+        <div class="result">نتیجه: ٪۱۵ افزایش (تورم)</div>
+      </div>
+      <div class="card example">
+        <span class="card-label">مثال ۲ — تخفیف (کاهش قیمت)</span>
+        <h3>قیمت از ۲۵۰ به ۲۰۰ هزار تومان رسیده</h3>
+        <div class="steps">
+          <div>تغییر = ۲۰۰ − ۲۵۰ = −۵۰</div>
+          <div>۵۰ ÷ ۲۵۰ = ۰٫۲</div>
+          <div>۰٫۲ × ۱۰۰ = ٪۲۰</div>
+        </div>
+        <div class="result">نتیجه: ٪۲۰ کاهش (تخفیف)</div>
+      </div>
+    </div>
+    <div class="card example">
+      <span class="card-label">مثال ۳ — محاسبهٔ قیمت جدید از روی درصد</span>
+      <h3>یک کالای ۴۰۰ هزار تومانی، ٪۱۲ تخفیف خورده؛ قیمت جدید چند است؟</h3>
+      <div class="steps">
+        <div>مقدار تخفیف = ۴۰۰٬۰۰۰ × ۰٫۱۲ = ۴۸٬۰۰۰</div>
+        <div>قیمت جدید = ۴۰۰٬۰۰۰ − ۴۸٬۰۰۰</div>
+      </div>
+      <div class="result">نتیجه: ۳۵۲٬۰۰۰ تومان</div>
+    </div>
+
+    <div class="card mistake">
+      <span class="card-label">اشتباهات پرتکرار</span>
+      <ul>
+        <li>مخرج Percentage Change همیشه مقدار Old (اولیه) است، نه New.</li>
+        <li>٪۳ را با ۰٫۳ اشتباه نگیر؛ ٪۳ = ۰٫۰۳ است.</li>
+        <li>درصد افزایش و مقدار افزایش یکی نیستند — یکی نسبی است، یکی مطلق.</li>
+        <li>اگر قیمتی ٪۲۰ بالا برود و بعد ٪۲۰ پایین بیاید، به قیمت اول برنمی‌گردیم! (چون مبنای درصد دوم عوض شده)</li>
+      </ul>
+    </div>
+
+    <div class="card examtip">
+      <span class="card-label">نکات امتحانی</span>
+      <ul>
+        <li>فرمول را با ترتیب New و Old حفظ کن — جابه‌جایی این دو، علامت جواب را برعکس می‌کند.</li>
+        <li>قبل از محاسبه، مشخص کن سؤال «مقدار تغییر» می‌خواهد یا «درصد تغییر».</li>
+        <li>برای تخفیف پشت‌سرهم (مثلاً ٪۱۰ و بعد ٪۱۰)، هربار روی مقدار جدید حساب کن، نه روی قیمت اصلی.</li>
+      </ul>
+    </div>
+
+    <div class="card practice">
+      <span class="card-label">تمرین این بخش</span>
+      <div class="qitem">
+        <b class="qnum">۱</b>قیمت ۱۸۰ به ۲۲۵ رسیده؛ درصد تغییر چقدر است؟
+        <details><summary>نمایش پاسخ</summary>
+          <div class="answer">
+            <div class="line">تغییر = ۲۲۵ − ۱۸۰ = ۴۵</div>
+            <div class="line">۴۵ ÷ ۱۸۰ = ۰٫۲۵</div>
+            <div class="line final">پاسخ نهایی: ٪۲۵ افزایش</div>
+          </div>
+        </details>
+      </div>
+      <div class="qitem">
+        <b class="qnum">۲</b>یک کالا ابتدا ٪۱۰ گران شد و بعد ٪۱۰ ارزان شد. آیا به قیمت اول برگشته؟ با عدد ۱۰۰ امتحان کن.
+        <details><summary>نمایش پاسخ</summary>
+          <div class="answer">
+            <div class="line">قیمت اول ۱۰۰؛ بعد از ٪۱۰ افزایش → ۱۱۰</div>
+            <div class="line">بعد از ٪۱۰ کاهش روی ۱۱۰ → ۱۱۰ − ۱۱ = ۹۹</div>
+            <div class="line final">پاسخ نهایی: نه، به ۹۹ می‌رسیم نه ۱۰۰ — چون مبنای درصد دوم عوض شده</div>
+          </div>
+        </details>
+      </div>
+      <div class="qitem">
+        <b class="qnum">۳</b>٪۴۵ را به کسر ساده تبدیل کن.
+        <details><summary>نمایش پاسخ</summary>
+          <div class="answer">
+            <div class="line">٪۴۵ = ۴۵/۱۰۰</div>
+            <div class="line">HCF(۴۵,۱۰۰)=۵ → صورت و مخرج را بر ۵ ساده می‌کنیم</div>
+            <div class="line final">پاسخ نهایی: ۹/۲۰</div>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SECTION 4 : قوانین توان ===================== -->
+  <section class="section" id="s4">
+    <div class="sec-head">
+      <div class="sec-num" style="background:var(--navy);">۷</div>
+      <div><span class="kicker">بخش هفتم</span><h2>قوانین پایهٔ توان‌ها (۷ قانون طلایی)</h2></div>
+    </div>
+    <div class="sec-intro">
+      این هفت قانون، ستون فقرات جبر هستند. باید بتونی بدون نگاه‌کردن به کتاب، هرکدوم رو بنویسی. برای هرکدوم سه مثال متنوع آوردیم تا کاملاً جا بیفتن.
+    </div>
+
+    <div class="card concept">
+      <span class="card-label">قانون ۱</span>
+      <h3>ضرب توان‌های هم‌پایه</h3>
+      <div class="formula">a<sup>m</sup> × a<sup>n</sup> = a<sup>m+n</sup></div>
+      <p>وقتی پایه‌ها یکسانند، توان‌ها را <b>جمع</b> می‌کنیم.</p>
+      <ul>
+        <li>مثال ۱: ۲<sup>۳</sup> × ۲<sup>۴</sup> = ۲<sup>۷</sup> = ۱۲۸</li>
+        <li>مثال ۲: x<sup>۵</sup> × x<sup>۲</sup> = x<sup>۷</sup></li>
+        <li>مثال ۳: (−۳)<sup>۲</sup> × (−۳)<sup>۳</sup> = (−۳)<sup>۵</sup> = −۲۴۳</li>
+      </ul>
+    </div>
+
+    <div class="card concept">
+      <span class="card-label">قانون ۲</span>
+      <h3>تقسیم توان‌های هم‌پایه</h3>
+      <div class="formula">a<sup>m</sup> ÷ a<sup>n</sup> = a<sup>m−n</sup></div>
+      <p>وقتی پایه‌ها یکسانند، توان‌ها را <b>کم</b> می‌کنیم.</p>
+      <ul>
+        <li>مثال ۱: ۵<sup>۶</sup> ÷ ۵<sup>۲</sup> = ۵<sup>۴</sup> = ۶۲۵</li>
+        <li>مثال ۲: x<sup>۹</sup> ÷ x<sup>۴</sup> = x<sup>۵</sup></li>
+        <li>مثال ۳: ۷<sup>۳</sup> ÷ ۷<sup>۳</sup> = ۷<sup>۰</sup> = ۱ (پل ورود به قانون بعدی!)</li>
+      </ul>
+    </div>
+
+    <div class="card concept">
+      <span class="card-label">قانون ۳</span>
+      <h3>توان صفر</h3>
+      <div class="formula">a<sup>۰</sup> = 1  (به‌شرط a ≠ ۰)</div>
+      <p>هر عدد غیرصفر به توان صفر همیشه برابر ۱ است.</p>
+      <ul>
+        <li>مثال ۱: ۱۰۰<sup>۰</sup> = ۱</li>
+        <li>مثال ۲: (−۷)<sup>۰</sup> = ۱</li>
+        <li>مثال ۳: (۲x)<sup>۰</sup> = ۱ (به‌شرط x≠۰)</li>
+      </ul>
+    </div>
+
+    <div class="card concept">
+      <span class="card-label">قانون ۴</span>
+      <h3>توان یک</h3>
+      <div class="formula">a<sup>۱</sup> = a</div>
+      <p>هر عددی به توان ۱ همان خودش است — ساده، ولی جای فراموشی در محاسبات چندمرحله‌ای دارد.</p>
+      <ul>
+        <li>مثال ۱: ۱۲<sup>۱</sup> = ۱۲</li>
+        <li>مثال ۲: (x+۳)<sup>۱</sup> = x+۳</li>
+        <li>مثال ۳: ۵<sup>۳</sup> ÷ ۵<sup>۲</sup> = ۵<sup>۱</sup> = ۵</li>
+      </ul>
+    </div>
+
+    <div class="card concept">
+      <span class="card-label">قانون ۵</span>
+      <h3>توانِ توان</h3>
+      <div class="formula">(a<sup>m</sup>)<sup>n</sup> = a<sup>m</sup>ˣ<sup>n</sup></div>
+      <p>وقتی توانی خودش به توان دیگری می‌رود، توان‌ها را <b>ضرب</b> می‌کنیم (نه جمع!).</p>
+      <ul>
+        <li>مثال ۱: (۵<sup>۳</sup>)<sup>۲</sup> = ۵<sup>۶</sup> = ۱۵٬۶۲۵</li>
+        <li>مثال ۲: (x<sup>۲</sup>)<sup>۴</sup> = x<sup>۸</sup></li>
+        <li>مثال ۳: (۲<sup>۲</sup>)<sup>۳</sup> = ۲<sup>۶</sup> = ۶۴</li>
+      </ul>
+    </div>
+
+    <div class="card concept">
+      <span class="card-label">قانون ۶</span>
+      <h3>توزیع توان در ضرب و تقسیم</h3>
+      <div class="formula">(ab)<sup>n</sup> = a<sup>n</sup>×b<sup>n</sup>  و  (a/b)<sup>n</sup> = a<sup>n</sup>/b<sup>n</sup></div>
+      <p>توان روی هر عامل داخل پرانتز به‌طور جداگانه پخش می‌شود.</p>
+      <ul>
+        <li>مثال ۱: (۲×۳)<sup>۲</sup> = ۲<sup>۲</sup>×۳<sup>۲</sup> = ۴×۹ = ۳۶</li>
+        <li>مثال ۲: (x/۲)<sup>۳</sup> = x<sup>۳</sup>/۸</li>
+        <li>مثال ۳: (۲a b)<sup>۲</sup> = ۴a<sup>۲</sup>b<sup>۲</sup></li>
+      </ul>
+    </div>
+
+    <div class="card concept">
+      <span class="card-label">قانون ۷</span>
+      <h3>توان منفی (معکوس‌کننده)</h3>
+      <div class="formula">a<sup>−۱</sup> = 1/a  و  (a/b)<sup>−n</sup> = (b/a)<sup>n</sup></div>
+      <p>توان منفی فقط عدد را «معکوس» می‌کند؛ خود عدد را منفی نمی‌کند!</p>
+      <ul>
+        <li>مثال ۱: ۲<sup>−۴</sup> = ۱/۲<sup>۴</sup> = ۱/۱۶</li>
+        <li>مثال ۲: (۲/۵)<sup>−۲</sup> = (۵/۲)<sup>۲</sup> = ۲۵/۴</li>
+        <li>مثال ۳: ۳<sup>−۱</sup> + ۲<sup>−۱</sup> = ۱/۳ + ۱/۲ = ۵/۶</li>
+      </ul>
+    </div>
+
+    <div class="card mistake">
+      <span class="card-label">اشتباهات پرتکرار</span>
+      <ul>
+        <li>جمع پایه‌ها: ۲<sup>۵</sup> + ۲<sup>۳</sup> ≠ ۲<sup>۸</sup> — قوانین ضرب/تقسیم فقط وقتی کار می‌کنند که واقعاً ضرب یا تقسیم داشته باشیم، نه جمع!</li>
+        <li>در (a<sup>m</sup>)<sup>n</sup> توان‌ها ضرب می‌شوند نه جمع.</li>
+        <li>توان منفی را با منفی‌شدن خود عدد اشتباه نگیر: ۲<sup>−۳</sup> = ۱/۸ است، نه −۸.</li>
+        <li>دقت کن: (−۵)<sup>۲</sup> = ۲۵ ولی −۵<sup>۲</sup> = −۲۵ (پرانتز همه‌چیز را عوض می‌کند!)</li>
+      </ul>
+    </div>
+
+    <div class="card examtip">
+      <span class="card-label">نکات امتحانی</span>
+      <ul>
+        <li>هر هفت قانون را باید بدون نگاه‌کردن به کتاب، در چند ثانیه بنویسی.</li>
+        <li>توان منفی و کسری را بتوانی سریع بین فرم توانی و رادیکالی جابه‌جا کنی.</li>
+        <li>همیشه اول پرانتزها را چک کن؛ محل پرانتز، تعیین‌کنندهٔ علامت نهایی است.</li>
+      </ul>
+    </div>
+
+    <div class="card practice">
+      <span class="card-label">تمرین این بخش</span>
+      <div class="qitem">
+        <b class="qnum">۱</b>عبارت (۳<sup>۲</sup>)<sup>۳</sup> × ۳<sup>−</sup>۴ را ساده کن.
+        <details><summary>نمایش پاسخ</summary>
+          <div class="answer">
+            <div class="line">(۳<sup>۲</sup>)<sup>۳</sup> = ۳<sup>۶</sup> (قانون ۵: توان‌ها ضرب می‌شوند)</div>
+            <div class="line">۳<sup>۶</sup> × ۳<sup>−۴</sup> = ۳<sup>۶−۴</sup> = ۳<sup>۲</sup> (قانون ۱: توان‌ها جمع می‌شوند)</div>
+            <div class="line final">پاسخ نهایی: ۳<sup>۲</sup> = ۹</div>
+          </div>
+        </details>
+      </div>
+      <div class="qitem">
+        <b class="qnum">۲</b>عبارت (x/y)<sup>−۳</sup> × (x/y)<sup>۵</sup> را ساده کن.
+        <details><summary>نمایش پاسخ</summary>
+          <div class="answer">
+            <div class="line">پایه‌ها یکسان‌اند (x/y)، پس توان‌ها را جمع می‌کنیم.</div>
+            <div class="line">−۳ + ۵ = ۲</div>
+            <div class="line final">پاسخ نهایی: (x/y)<sup>۲</sup></div>
+          </div>
+        </details>
+      </div>
+      <div class="qitem">
+        <b class="qnum">۳</b>حاصل ۲<sup>−۱</sup> + ۴<sup>−۱</sup> چقدر است؟
+        <details><summary>نمایش پاسخ</summary>
+          <div class="answer">
+            <div class="line">۲<sup>−۱</sup> = ۱/۲ و ۴<sup>−۱</sup> = ۱/۴</div>
+            <div class="line">مخرج مشترک ۴: ۱/۲ = ۲/۴</div>
+            <div class="line">۲/۴ + ۱/۴ = ۳/۴</div>
+            <div class="line final">پاسخ نهایی: ۳/۴</div>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SECTION 5 : رادیکال‌ها ===================== -->
+  <section class="section" id="s5">
+    <div class="sec-head">
+      <div class="sec-num" style="background:var(--blue);">۸</div>
+      <div><span class="kicker">بخش هشتم</span><h2>ریشه‌ها و رادیکال‌ها: ضرب، تقسیم و ساده‌سازی</h2></div>
+    </div>
+
+    <div class="card concept">
+      <span class="card-label">مفاهیم اصلی</span>
+      <h3>ضرب و تقسیم رادیکال‌های هم‌فرجه</h3>
+      <div class="formula"><sup>n</sup>√a × <sup>n</sup>√b = <sup>n</sup>√(a×b)   و   <sup>n</sup>√a ÷ <sup>n</sup>√b = <sup>n</sup>√(a/b)</div>
+      <p>این قانون فقط وقتی مستقیم کار می‌کند که فرجهٔ (اندیس) دو رادیکال یکسان باشد. جمع و تفریق رادیکال از این قانون پیروی <b>نمی‌کند</b>: <sup>n</sup>√a + <sup>n</sup>√b ≠ <sup>n</sup>√(a+b)</p>
+    </div>
+    <div class="grid2">
+      <div class="card example">
+        <span class="card-label">مثال ۱</span>
+        <h3>ضرب رادیکال‌های هم‌فرجه</h3>
+        <div class="steps">
+          <div>∛۴ × ∛۳ = ∛(۴×۳) = ∛۱۲</div>
+        </div>
+        <div class="result">نتیجه: ∛۱۲</div>
+      </div>
+      <div class="card example">
+        <span class="card-label">مثال ۲</span>
+        <h3>تقسیم رادیکال‌های هم‌فرجه</h3>
+        <div class="steps">
+          <div>√۵۰ ÷ √۲ = √(۵۰/۲) = √۲۵</div>
+        </div>
+        <div class="result">نتیجه: ۵</div>
+      </div>
+    </div>
+    <div class="card example">
+      <span class="card-label">مثال ۳ (چالشی)</span>
+      <h3>ضرب رادیکال‌های ناهم‌فرجه</h3>
+      <div class="steps">
+        <div>می‌خواهیم ∛۵ × √۵ را ساده کنیم؛ فرجه‌ها فرق دارند (۳ و ۲).</div>
+        <div>ابتدا فرجه‌ها را با LCM هم‌سان می‌کنیم: LCM(۲,۳)=۶</div>
+        <div>∛۵ = <sup>۶</sup>√(۵<sup>۲</sup>) = <sup>۶</sup>√۲۵  و  √۵ = <sup>۶</sup>√(۵<sup>۳</sup>) = <sup>۶</sup>√۱۲۵</div>
+        <div>حالا می‌توان ضرب کرد: <sup>۶</sup>√(۲۵×۱۲۵) = <sup>۶</sup>√۳۱۲۵</div>
+      </div>
+      <div class="result">نتیجه: <sup>۶</sup>√۳۱۲۵</div>
+    </div>
+
+    <div class="card concept">
+      <span class="card-label">مفاهیم اصلی</span>
+      <h3>سادهٔ توان و فرجه (وقتی هر دو مضرب مشترک دارند)</h3>
+      <div class="formula"><sup>mn</sup>√(a<sup>n</sup>) = <sup>m</sup>√a</div>
+      <p>اگر توانِ زیر رادیکال و فرجهٔ رادیکال، مقسوم‌علیه مشترک داشته باشند، می‌توان هر دو را بر آن مقسوم‌علیه ساده کرد — دقیقاً مثل ساده‌کردن کسر.</p>
+    </div>
+    <div class="grid2">
+      <div class="card example">
+        <span class="card-label">مثال ۴</span>
+        <h3>سادهٔ فرجه و توان</h3>
+        <div class="steps">
+          <div><sup>۶</sup>√(۲<sup>۴</sup>) → توان و فرجه هر دو بر ۲ بخش‌پذیرند</div>
+          <div><sup>۶</sup>√(۲<sup>۴</sup>) = <sup>۳</sup>√(۲<sup>۲</sup>)</div>
+        </div>
+        <div class="result">نتیجه: <sup>۳</sup>√۴</div>
+      </div>
+      <div class="card example">
+        <span class="card-label">مثال ۵</span>
+        <h3>سادهٔ فرجه و توان (عدد بزرگ‌تر)</h3>
+        <div class="steps">
+          <div><sup>۸</sup>√(x<sup>۶</sup>) → توان و فرجه هر دو بر ۲ بخش‌پذیرند</div>
+          <div><sup>۸</sup>√(x<sup>۶</sup>) = <sup>۴</sup>√(x<sup>۳</sup>)</div>
+        </div>
+        <div class="result">نتیجه: <sup>۴</sup>√(x<sup>۳</sup>)</div>
+      </div>
+    </div>
+
+    <div class="card concept">
+      <span class="card-label">مفاهیم اصلی</span>
+      <h3>بردن عدد به زیر رادیکال / خارج‌کردن از زیر رادیکال</h3>
+      <p>این قسمت دو حالت جدا دارد بسته به علامت a — دقت کن که کدام‌یک را استفاده می‌کنی:</p>
+      <table>
+        <tr><th>حالت</th><th>قاعده</th></tr>
+        <tr><td>a ≥ ۰ (مثبت یا صفر)</td><td>a·<sup>n</sup>√b = <sup>n</sup>√(a<sup>n</sup>·b)</td></tr>
+        <tr><td>a &lt; ۰ و n زوج</td><td>a·<sup>n</sup>√b = −<sup>n</sup>√(a<sup>n</sup>·b) &nbsp;(علامت منفی باید بیرون از رادیکال بماند)</td></tr>
+      </table>
+    </div>
+    <div class="grid2">
+      <div class="card example">
+        <span class="card-label">مثال ۶ (a مثبت)</span>
+        <h3>بردن عدد مثبت زیر رادیکال</h3>
+        <div class="steps">
+          <div>می‌خواهیم ۳√۵ را زیر یک رادیکال واحد ببریم.</div>
+          <div>۳√۵ = √(۳<sup>۲</sup>×۵) = √(۹×۵)</div>
+        </div>
+        <div class="result">نتیجه: √۴۵</div>
+      </div>
+      <div class="card example">
+        <span class="card-label">مثال ۷ (a منفی)</span>
+        <h3>بردن عدد منفی زیر رادیکال</h3>
+        <div class="steps">
+          <div>می‌خواهیم −۲√۵ را زیر رادیکال ببریم (فرجه زوج است، پس علامت منفی بیرون می‌ماند).</div>
+          <div>−۲√۵ = −√(۲<sup>۲</sup>×۵) = −√۲۰</div>
+        </div>
+        <div class="result">نتیجه: −√۲۰ (نه √۲۰ و نه −√(−۲۰) که اصلاً تعریف‌نشده است!)</div>
+      </div>
+    </div>
+
+    <div class="card concept">
+      <span class="card-label">مفاهیم اصلی</span>
+      <h3>قدر مطلق در خروج متغیر از رادیکال زوج (یکی از مهم‌ترین دام‌های امتحانی)</h3>
+      <p>وقتی زیر یک رادیکال با فرجهٔ زوج، به‌جای عدد مشخص یک <b>متغیر ناشناخته</b> داریم، نمی‌دانیم علامت آن مثبت است یا منفی. چون خروجی رادیکال هیچ‌وقت منفی نمی‌شود، باید از قدر مطلق استفاده کنیم:</p>
+      <div class="formula ltr" style="justify-content:center;">√(x<sup>۲</sup>) = |x|</div>
+      <p style="font-size:13.5px;color:var(--sub);">این با √۹ = ۳ فرق دارد؛ آنجا چون عدد مشخص و مثبت است جواب هم مستقیم مثبت می‌شود. اما x می‌تواند منفی هم باشد، پس فقط نوشتنِ «x» به‌جای «|x|» اشتباه است.</p>
+    </div>
+    <div class="card example">
+      <span class="card-label">مثال ۸٫۵ — دام قدر مطلق</span>
+      <h3>سادهٔ √(x<sup>۲</sup>) برای x = −۵</h3>
+      <div class="steps">
+        <div class="ltr">اگر مستقیم بنویسیم x = −۵ ← اشتباه است، چون رادیکال هرگز جواب منفی نمی‌دهد.</div>
+        <div class="ltr">روش درست: √(x<sup>۲</sup>) = |x| = |−۵| = ۵</div>
+      </div>
+      <div class="result">نتیجه: ۵ (نه −۵)</div>
+    </div>
+
+    <div class="card concept">
+      <span class="card-label">مفاهیم اصلی</span>
+      <h3>شرط دامنه (Domain) در رادیکال‌های زوج</h3>
+      <p>برای رادیکال با فرجهٔ زوج (√ ، <sup>۴</sup>√ ، <sup>۶</sup>√ و...)، عبارت زیر رادیکال (A) باید <b>نامنفی</b> باشد تا جواب حقیقی داشته باشد:</p>
+      <div class="formula ltr" style="justify-content:center;"><sup>n</sup>√A تعریف‌شده ⇔ A ≥ ۰ &nbsp;(فقط برای n زوج)</div>
+      <p style="font-size:13.5px;color:var(--sub);">برای فرجهٔ فرد (∛ ، <sup>۵</sup>√ و...) این محدودیت وجود ندارد؛ A می‌تواند هر عددی — مثبت، منفی یا صفر — باشد.</p>
+    </div>
+    <div class="card example">
+      <span class="card-label">مثال ۸ (خارج‌کردن از رادیکال)</span>
+      <h3>خارج‌کردن عدد کامل از زیر رادیکال</h3>
+      <div class="steps">
+        <div>می‌خواهیم √۷۵ را ساده کنیم.</div>
+        <div>۷۵ = ۲۵ × ۳ و ۲۵ مربع کامل است.</div>
+        <div>√۷۵ = √۲۵ × √۳ = ۵√۳</div>
+      </div>
+      <div class="result">نتیجه: ۵√۳</div>
+    </div>
+
+    <div class="card concept">
+      <span class="card-label">مفاهیم اصلی</span>
+      <h3>فرجه‌های متوالی (رادیکال توی رادیکال)</h3>
+      <div class="formula"><sup>m</sup>√( <sup>n</sup>√( <sup>p</sup>√a ) ) = <sup>mnp</sup>√a</div>
+      <p>وقتی چند رادیکال تو در تو داریم، فرجه‌ها را در هم ضرب می‌کنیم و یک رادیکال واحد می‌سازیم.</p>
+    </div>
+    <div class="grid2">
+      <div class="card example">
+        <span class="card-label">مثال ۹</span>
+        <h3>ساده‌سازی فرجهٔ متوالی</h3>
+        <div class="steps">
+          <div>√(∛(۴)) = فرجه‌ها را ضرب می‌کنیم: ۲×۳=۶</div>
+        </div>
+        <div class="result">نتیجه: <sup>۶</sup>√۴</div>
+      </div>
+      <div class="card example">
+        <span class="card-label">مثال ۱۰</span>
+        <h3>فرجهٔ متوالی سه‌لایه</h3>
+        <div class="steps">
+          <div><sup>۵</sup>√(∛(√a)) → فرجه‌ها: ۵ × ۳ × ۲ = ۳۰</div>
+        </div>
+        <div class="result">نتیجه: <sup>۳۰</sup>√a</div>
+      </div>
+    </div>
+
+    <div class="card concept">
+      <span class="card-label">مفاهیم اصلی</span>
+      <h3>توان‌های گویا (رابطهٔ توان و ریشه)</h3>
+      <div class="formula"><sup>m</sup>√(a<sup>n</sup>) = a^(n/m)   (به‌شرط a &gt; ۰)</div>
+      <p>ریشه همیشه در مخرج توان قرار می‌گیرد و توان زیرِ رادیکال در صورت.</p>
+    </div>
+    <div class="grid2">
+      <div class="card example">
+        <span class="card-label">مثال ۱۱</span>
+        <h3>تبدیل رادیکال به توان کسری</h3>
+        <div class="steps">
+          <div>∛(x<sup>۲</sup>) → فرجه ۳ می‌رود مخرج، توان ۲ می‌رود صورت</div>
+        </div>
+        <div class="result">نتیجه: x^(۲/۳)</div>
+      </div>
+      <div class="card example">
+        <span class="card-label">مثال ۱۲</span>
+        <h3>تبدیل توان کسری به رادیکال</h3>
+        <div class="steps">
+          <div>۸^(۵/۳) → مخرج (۳) فرجهٔ رادیکال، صورت (۵) توان زیر رادیکال</div>
+        </div>
+        <div class="result">نتیجه: ∛(۸<sup>۵</sup>) که با ساده‌سازی می‌شود ۲<sup>۵</sup> = ۳۲</div>
+      </div>
+    </div>
+
+    <div class="card mistake">
+      <span class="card-label">اشتباهات پرتکرار</span>
+      <ul>
+        <li><sup>n</sup>√a + <sup>n</sup>√b هرگز برابر <sup>n</sup>√(a+b) نیست؛ فقط ضرب و تقسیم این قانون را دارند، نه جمع و تفریق.</li>
+        <li>وقتی a منفی و فرجه زوج است، عدد منفی هرگز زیر رادیکال نمی‌رود؛ همیشه بیرون از رادیکال باقی می‌ماند.</li>
+        <li>در ضرب رادیکال‌های ناهم‌فرجه، مستقیم زیر یک رادیکال جمعشان نکن — اول باید فرجه‌ها را با LCM یکسان کنی.</li>
+        <li>قبل از استفاده از قانون ریشه، همیشه چک کن عدد زیر رادیکال مربع/مکعب کامل هست یا نه.</li>
+      </ul>
+    </div>
+
+    <div class="card examtip">
+      <span class="card-label">نکات امتحانی</span>
+      <ul>
+        <li>سه قانون ضرب، تقسیم و توانِ توان رادیکال باید بدون نگاه‌کردن به کتاب نوشته شوند.</li>
+        <li>وقتی فرجه‌ها فرق دارند، اولین قدم همیشه یکسان‌سازی فرجه با LCM است.</li>
+        <li>توان منفی و کسری را بتوانی سریع بین فرم توانی و رادیکالی تبدیل کنی — این یکی از پرتکرارترین سؤال‌هاست.</li>
+      </ul>
+    </div>
+
+    <div class="card practice">
+      <span class="card-label">تمرین این بخش</span>
+      <div class="qitem">
+        <b class="qnum">۱</b>√۹۸ را ساده کن.
+        <details><summary>نمایش پاسخ</summary>
+          <div class="answer">
+            <div class="line">۹۸ = ۴۹ × ۲ و ۴۹ مربع کامل است.</div>
+            <div class="line">√۹۸ = √۴۹ × √۲ = ۷√۲</div>
+            <div class="line final">پاسخ نهایی: ۷√۲</div>
+          </div>
+        </details>
+      </div>
+      <div class="qitem">
+        <b class="qnum">۲</b>−۳√۲ را زیر یک رادیکال واحد ببر.
+        <details><summary>نمایش پاسخ</summary>
+          <div class="answer">
+            <div class="line">فرجه زوج است، پس علامت منفی بیرون می‌ماند.</div>
+            <div class="line">−۳√۲ = −√(۳<sup>۲</sup>×۲) = −√۱۸</div>
+            <div class="line final">پاسخ نهایی: −√۱۸</div>
+          </div>
+        </details>
+      </div>
+      <div class="qitem">
+        <b class="qnum">۳</b>عبارت x^(۳/۴) را به فرم رادیکالی بنویس.
+        <details><summary>نمایش پاسخ</summary>
+          <div class="answer">
+            <div class="line">مخرج توان (۴) فرجهٔ رادیکال می‌شود.</div>
+            <div class="line">صورت توان (۳) زیر رادیکال می‌رود.</div>
+            <div class="line final">پاسخ نهایی: <sup>۴</sup>√(x<sup>۳</sup>)</div>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SECTION 7 : ترتیب عملیات ===================== -->
+  <section class="section" id="s7">
+    <div class="sec-head">
+      <div class="sec-num" style="background:var(--red);">۹</div>
+      <div><span class="kicker">بخش نهم</span><h2>ترتیب عملیات (BODMAS/PEMDAS)</h2></div>
+    </div>
+
+    <div class="card concept">
+      <span class="card-label">مفاهیم اصلی</span>
+      <h3>ترتیب اجرای عملیات</h3>
+      <div class="badge-row">
+        <span class="pill" style="background:var(--blue);">۱. پرانتزها</span>
+        <span class="pill" style="background:var(--green);">۲. توان و ریشه</span>
+        <span class="pill" style="background:var(--gold);">۳. ضرب و تقسیم (چپ به راست)</span>
+        <span class="pill" style="background:var(--red);">۴. جمع و تفریق (چپ به راست)</span>
+      </div>
+      <p>هرجا دو عملیات هم‌رتبه (مثلاً دو تا ضرب و تقسیم) کنار هم بودند، از چپ به راست پیش می‌روی.</p>
+    </div>
+
+    <div class="grid2">
+      <div class="card example">
+        <span class="card-label">مثال ۱</span>
+        <h3>ترکیب ضرب و جمع</h3>
+        <div class="steps">
+          <div class="ltr">۲ + ۳ × ۴</div>
+          <div class="ltr">اول ضرب: ۳×۴ = ۱۲</div>
+          <div class="ltr">بعد جمع: ۱۲ + ۲ = ۱۴</div>
+        </div>
+        <div class="result">نتیجه: ۱۴</div>
+      </div>
+      <div class="card example">
+        <span class="card-label">مثال ۲</span>
+        <h3>پرانتز تو در تو</h3>
+        <div class="steps">
+          <div class="ltr">۳ − (۲ − (۱−۶) − ۳) + ۴</div>
+          <div class="ltr">داخلی‌ترین پرانتز: ۱−۶ = −۵</div>
+          <div class="ltr">۲ − (−۵) − ۳ = ۲+۵−۳ = ۴</div>
+          <div class="ltr">۳ − ۴ + ۴ = ۳</div>
+        </div>
+        <div class="result">نتیجه: ۳</div>
+      </div>
+    </div>
+    <div class="card example">
+      <span class="card-label">مثال ۳</span>
+      <h3>ترکیب توان، پرانتز و ضرب</h3>
+      <div class="steps">
+        <div class="ltr">۱ + (۳×۲<sup>۲</sup> − ۲) − ۳ + ۵×۲<sup>۲</sup></div>
+        <div class="ltr">ابتدا توان: ۲<sup>۲</sup> = ۴، پس ۳×۴−۲ = ۱۰</div>
+        <div class="ltr">حالا پرانتز: ۱ + ۱۰ − ۳ = ۸</div>
+        <div class="ltr">۵ × ۲<sup>۲</sup> = ۵×۴ = ۲۰</div>
+        <div class="ltr">۸ + ۲۰</div>
+      </div>
+      <div class="result">نتیجه: ۲۸</div>
+    </div>
+
+    <div class="card mistake">
+      <span class="card-label">اشتباهات پرتکرار</span>
+      <ul>
+        <li>در <span class="ltr">۲+۳×۴</span>، هرگز جمع را قبل از ضرب انجام نده!</li>
+        <li>توان و ریشه، قبل از ضرب و تقسیم اجرا می‌شوند نه بعدش.</li>
+        <li>در پرانتزهای تو در تو، همیشه از داخلی‌ترین پرانتز شروع کن.</li>
+      </ul>
+    </div>
+
+    <div class="card examtip">
+      <span class="card-label">نکات امتحانی</span>
+      <ul>
+        <li>BODMAS را در هر عبارت چندعملیاتی، قبل از هر محاسبه‌ای، روی کاغذ پیاده کن.</li>
+        <li>در عبارت‌های طولانی، هر مرحله را زیر مرحلهٔ قبل بنویس تا اشتباه کپی‌کردن رخ ندهد.</li>
+      </ul>
+    </div>
+
+    <div class="card practice">
+      <span class="card-label">تمرین این بخش</span>
+      <div class="qitem">
+        <b class="qnum">۱</b><span class="ltr">۲×۳<sup>۲</sup> − ۱۲÷۴</span> را حساب کن.
+        <details><summary>نمایش پاسخ</summary>
+          <div class="answer">
+            <div class="line ltr">توان: ۳<sup>۲</sup>=۹ → ۲×۹=۱۸</div>
+            <div class="line ltr">تقسیم: ۱۲÷۴=۳</div>
+            <div class="line ltr">۱۸−۳=۱۵</div>
+            <div class="line final">پاسخ نهایی: ۱۵</div>
+          </div>
+        </details>
+      </div>
+      <div class="qitem">
+        <b class="qnum">۲</b><span class="ltr">(۵−۲)<sup>۲</sup> × ۲ + ۱</span> را حساب کن.
+        <details><summary>نمایش پاسخ</summary>
+          <div class="answer">
+            <div class="line ltr">پرانتز: ۵−۲=۳</div>
+            <div class="line ltr">توان: ۳<sup>۲</sup>=۹</div>
+            <div class="line ltr">۹×۲=۱۸ ، سپس ۱۸+۱=۱۹</div>
+            <div class="line final">پاسخ نهایی: ۱۹</div>
+          </div>
+        </details>
+      </div>
+      <div class="qitem">
+        <b class="qnum">۳</b><span class="ltr">۲۰ ÷ (۴−۲) × ۳</span> را حساب کن.
+        <details><summary>نمایش پاسخ</summary>
+          <div class="answer">
+            <div class="line ltr">پرانتز: ۴−۲=۲</div>
+            <div class="line">۲۰÷۲=۱۰ (تقسیم و ضرب هم‌رتبه‌اند، از چپ به راست)</div>
+            <div class="line ltr">۱۰×۳=۳۰</div>
+            <div class="line final">پاسخ نهایی: ۳۰</div>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SECTION 8 : جملات هم‌نوع ===================== -->
+  <section class="section" id="s8">
+    <div class="sec-head">
+      <div class="sec-num" style="background:var(--purple);">۱۰</div>
+      <div><span class="kicker">بخش دهم</span><h2>ترکیب جملات هم‌نوع (Like Terms)</h2></div>
+    </div>
+
+    <div class="card concept">
+      <span class="card-label">مفاهیم اصلی</span>
+      <h3>چه جملاتی هم‌نوع‌اند؟</h3>
+      <p>فقط جملاتی که <b>متغیر و توان</b> آن‌ها دقیقاً یکسان است می‌توانند با هم جمع یا تفریق شوند — ضریب‌ها اهمیتی ندارد.</p>
+    </div>
+
+    <div class="grid2">
+      <div class="card example">
+        <span class="card-label">مثال ۱</span>
+        <h3>جملات هم‌نوع</h3>
+        <div class="steps">
+          <div class="ltr">۳x + ۵x → متغیر یکسان (x)، توان یکسان (۱)</div>
+        </div>
+        <div class="result ltr">نتیجه: ۸x</div>
+      </div>
+      <div class="card example">
+        <span class="card-label">مثال ۲</span>
+        <h3>ترکیب چند جملهٔ هم‌نوع</h3>
+        <div class="steps">
+          <div class="ltr">۷x<sup>۲</sup> − ۲x + ۴x<sup>۲</sup> + ۵x</div>
+          <div class="ltr">جملات x<sup>۲</sup>: ۷x<sup>۲</sup>+۴x<sup>۲</sup>=۱۱x<sup>۲</sup></div>
+          <div class="ltr">جملات x: −۲x+۵x=۳x</div>
+        </div>
+        <div class="result ltr">نتیجه: ۱۱x<sup>۲</sup> + ۳x</div>
+      </div>
+    </div>
+    <div class="card example">
+      <span class="card-label">مثال ۳</span>
+      <h3>جملات ناهم‌نوع (نمی‌شود ساده کرد)</h3>
+      <div class="steps">
+        <div class="ltr">۴xy + ۳x<sup>۲</sup>y − ۲xy</div>
+        <div>فقط ۴xy و −۲xy هم‌نوع‌اند (چون هر دو xy هستند، نه x<sup>۲</sup>y)</div>
+        <div class="ltr">۴xy − ۲xy = ۲xy</div>
+      </div>
+      <div class="result ltr">نتیجه: ۲xy + ۳x<sup>۲</sup>y (این دو جمله دیگر باهم ترکیب نمی‌شوند)</div>
+    </div>
+
+    <div class="card mistake">
+      <span class="card-label">اشتباهات پرتکرار</span>
+      <ul>
+        <li><span class="ltr">۳x + ۵x<sup>۲</sup></span> هرگز برابر <span class="ltr">۸x<sup>۳</sup></span> نیست — این دو جمله اصلاً هم‌نوع نیستند (توان‌ها یکی نیست).</li>
+        <li><span class="ltr">3x</span> و <span class="ltr">3x<sup>۲</sup></span> را با هم اشتباه نگیر؛ اختلاف فقط در توان، کل ماهیت جمله را عوض می‌کند.</li>
+        <li>در سادهٔ عبارت‌های چندجمله‌ای، همیشه اول زیر جملات هم‌نوع را با رنگ یا شکل مشخص کن تا گم نشوی.</li>
+      </ul>
+    </div>
+
+    <div class="card examtip">
+      <span class="card-label">نکات امتحانی</span>
+      <ul>
+        <li>قبل از سادهٔ هر عبارت طولانی، زیر جملات هم‌نوع خط رنگی یا زیگزاگ بکش.</li>
+        <li>در سؤال‌های چندگزینه‌ای، معمولاً یک گزینه دقیقاً همین دام «جمع توان به‌جای جمع ضریب» را دارد.</li>
+      </ul>
+    </div>
+
+    <div class="card practice">
+      <span class="card-label">تمرین این بخش</span>
+      <div class="qitem">
+        <b class="qnum">۱</b><span class="ltr">۹a − ۴b + ۲a + ۷b</span> را ساده کن.
+        <details><summary>نمایش پاسخ</summary>
+          <div class="answer">
+            <div class="line ltr">جملات a: ۹a+۲a=۱۱a</div>
+            <div class="line ltr">جملات b: −۴b+۷b=۳b</div>
+            <div class="line final ltr">پاسخ نهایی: ۱۱a + ۳b</div>
+          </div>
+        </details>
+      </div>
+      <div class="qitem">
+        <b class="qnum">۲</b><span class="ltr">۵x<sup>۲</sup> + ۲x − x<sup>۲</sup> + ۳</span> را ساده کن.
+        <details><summary>نمایش پاسخ</summary>
+          <div class="answer">
+            <div class="line ltr">جملات x<sup>۲</sup>: ۵x<sup>۲</sup>−x<sup>۲</sup>=۴x<sup>۲</sup></div>
+            <div class="line">جملهٔ x (فقط یکی است): ۲x</div>
+            <div class="line">عدد ثابت: ۳</div>
+            <div class="line final ltr">پاسخ نهایی: ۴x<sup>۲</sup> + ۲x + ۳</div>
+          </div>
+        </details>
+      </div>
+      <div class="qitem">
+        <b class="qnum">۳</b>آیا <span class="ltr">۶xy<sup>۲</sup></span> و <span class="ltr">۶x<sup>۲</sup>y</span> هم‌نوع‌اند؟ چرا؟
+        <details><summary>نمایش پاسخ</summary>
+          <div class="answer">
+            <div class="line ltr">در ۶xy<sup>۲</sup>، توان y برابر ۲ و توان x برابر ۱ است.</div>
+            <div class="line ltr">در ۶x<sup>۲</sup>y، توان x برابر ۲ و توان y برابر ۱ است.</div>
+            <div class="line final">پاسخ نهایی: نه، هم‌نوع نیستند — چون توزیع توان بین متغیرها متفاوت است</div>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SECTION 9 : اتحادها ===================== -->
+  <section class="section" id="s9">
+    <div class="sec-head">
+      <div class="sec-num" style="background:var(--green);">۱۱</div>
+      <div><span class="kicker">بخش یازدهم</span><h2>اتحادهای جبری و فاکتورگیری</h2></div>
+    </div>
+
+    <div class="card concept">
+      <span class="card-label">مفاهیم اصلی</span>
+      <h3>جدول اتحادهای پرکاربرد</h3>
+      <table>
+        <tr><th>نام</th><th>فرمول</th><th>مثال</th></tr>
+        <tr><td>مربع دوجمله‌ای</td><td>(a±b)<sup>۲</sup> = a<sup>۲</sup>±۲ab+b<sup>۲</sup></td><td>(x+۳)<sup>۲</sup> = x<sup>۲</sup>+۶x+۹</td></tr>
+        <tr><td>مزدوج (تفاضل مربعات)</td><td>(a+b)(a−b) = a<sup>۲</sup>−b<sup>۲</sup></td><td>(x+۵)(x−۵) = x<sup>۲</sup>−۲۵</td></tr>
+        <tr><td>مربع سه‌جمله‌ای</td><td>(a+b+c)<sup>۲</sup> = a<sup>۲</sup>+b<sup>۲</sup>+c<sup>۲</sup>+۲ab+۲ac+۲bc</td><td>(x+y+۱)<sup>۲</sup> = x<sup>۲</sup>+y<sup>۲</sup>+۱+۲xy+۲x+۲y</td></tr>
+        <tr><td>مکعب دوجمله‌ای</td><td>(a±b)<sup>۳</sup> = a<sup>۳</sup>±۳a<sup>۲</sup>b+۳ab<sup>۲</sup>±b<sup>۳</sup></td><td>(x−۱)<sup>۳</sup> = x<sup>۳</sup>−۳x<sup>۲</sup>+۳x−۱</td></tr>
+        <tr><td>چاق و لاغر (مجموع/تفاضل مکعبات)</td><td>a<sup>۳</sup>±b<sup>۳</sup> = (a±b)(a<sup>۲</sup>∓ab+b<sup>۲</sup>)</td><td>x<sup>۳</sup>−۸ = (x−۲)(x<sup>۲</sup>+۲x+۴)</td></tr>
+        <tr><td>جملهٔ مشترک</td><td>(x+a)(x+b) = x<sup>۲</sup>+(a+b)x+ab</td><td>(x+۲)(x+۳) = x<sup>۲</sup>+۵x+۶</td></tr>
+      </table>
+    </div>
+
+    <div class="card concept">
+      <span class="card-label">مفاهیم اصلی</span>
+      <h3>راهبردهای فاکتورگیری (تجزیه)</h3>
+      <ol>
+        <li><b>دسته‌بندی و فاکتورگیری:</b> عبارت را طوری دسته‌بندی می‌کنیم که یک پرانتز یکسان در همه‌جا ظاهر شود.</li>
+        <li><b>عکس اتحاد مزدوج:</b> اگر عبارت به‌شکل a<sup>۲</sup>−b<sup>۲</sup> بود، مستقیم به (a−b)(a+b) تبدیل می‌شود.</li>
+        <li><b>عکس چاق و لاغر:</b> اگر عبارت به‌شکل a<sup>۳</sup>±b<sup>۳</sup> بود (هر دو توان مضرب ۳)، از فرمول چاق‌ولاغر استفاده می‌کنیم.</li>
+      </ol>
+    </div>
+
+    <div class="grid2">
+      <div class="card example">
+        <span class="card-label">مثال ۱ — دسته‌بندی</span>
+        <h3>فاکتورگیری با شکستن جمله</h3>
+        <div class="steps">
+          <div>۲x<sup>۲</sup> + ۷x + ۳</div>
+          <div>۷x را می‌شکنیم به ۶x + x: ۲x<sup>۲</sup>+۶x+x+۳</div>
+          <div>دسته‌بندی: ۲x(x+۳) + ۱(x+۳)</div>
+        </div>
+        <div class="result">نتیجه: (۲x+۱)(x+۳)</div>
+      </div>
+      <div class="card example">
+        <span class="card-label">مثال ۲ — عکس مزدوج</span>
+        <h3>فاکتورگیری تفاضل مربعات</h3>
+        <div class="steps">
+          <div>x<sup>۲</sup> − ۴۹</div>
+          <div>۴۹ = ۷<sup>۲</sup></div>
+        </div>
+        <div class="result">نتیجه: (x−۷)(x+۷)</div>
+      </div>
+    </div>
+    <div class="card example">
+      <span class="card-label">مثال ۳ — عکس چاق و لاغر</span>
+      <h3>فاکتورگیری مجموع مکعبات</h3>
+      <div class="steps">
+        <div>x<sup>۳</sup> + ۲۷</div>
+        <div>۲۷ = ۳<sup>۳</sup></div>
+        <div>از فرمول a<sup>۳</sup>+b<sup>۳</sup>=(a+b)(a<sup>۲</sup>−ab+b<sup>۲</sup>) استفاده می‌کنیم</div>
+      </div>
+      <div class="result">نتیجه: (x+۳)(x<sup>۲</sup>−۳x+۹)</div>
+    </div>
+
+    <div class="card concept">
+      <span class="card-label">مفاهیم اصلی</span>
+      <h3>شرط دامنه: مخرج هرگز نباید صفر شود</h3>
+      <p>در هر عبارت کسری یا گویا (Rational Expression)، هر مقداری از متغیر که مخرج را صفر کند، از دامنهٔ عبارت <b>حذف</b> می‌شود — چون تقسیم بر صفر تعریف‌نشده است.</p>
+      <div class="formula ltr" style="justify-content:center;">
+        <span class="frac"><span class="num">A(x)</span><span class="den">B(x)</span></span> تعریف‌شده ⇔ B(x) ≠ ۰
+      </div>
+    </div>
+    <div class="card example">
+      <span class="card-label">مثال — تعیین دامنه</span>
+      <h3 class="ltr" style="justify-content:flex-start;"><span class="frac"><span class="num">۵</span><span class="den">x−۳</span></span></h3>
+      <div class="steps">
+        <div>مخرج نباید صفر شود: x − ۳ ≠ ۰</div>
+      </div>
+      <div class="result ltr">نتیجه: x ≠ ۳ (این کسر برای هر x به‌جز ۳ تعریف‌شده است)</div>
+    </div>
+
+    <div class="card concept">
+      <span class="card-label">مفاهیم اصلی</span>
+      <h3>گویا کردن مخرج کسر</h3>
+      <p>هدف این است که رادیکال از مخرج بیرون برود. برای این کار، صورت و مخرج را در «یار مناسب» ضرب می‌کنیم:</p>
+      <table>
+        <tr><th>فرم مخرج</th><th>روش گویاسازی</th></tr>
+        <tr><td>√a</td><td>صورت و مخرج را در √a ضرب کن</td></tr>
+        <tr><td><sup>n</sup>√(aᵏ) با k&lt;n</td><td>در <sup>n</sup>√(a<sup>n−</sup>ᵏ) ضرب کن تا توان زیر رادیکال به n برسد</td></tr>
+        <tr><td>√a ± √b (مزدوج)</td><td>در مزدوج آن یعنی √a ∓ √b ضرب کن</td></tr>
+      </table>
+    </div>
+    <div class="grid2">
+      <div class="card example">
+        <span class="card-label">مثال ۴</span>
+        <h3>گویاسازی مخرج ساده</h3>
+        <div class="steps">
+          <div>۳/√۷ را در √۷/√۷ ضرب می‌کنیم</div>
+          <div>(۳×√۷) / (√۷×√۷) = ۳√۷/۷</div>
+        </div>
+        <div class="result">نتیجه: ۳√۷ / ۷</div>
+      </div>
+      <div class="card example">
+        <span class="card-label">مثال ۵</span>
+        <h3>گویاسازی مخرج با مزدوج</h3>
+        <div class="steps">
+          <div>۲/(√۵−۱) را در مزدوج مخرج یعنی (√۵+۱) ضرب می‌کنیم</div>
+          <div>۲(√۵+۱) / ((√۵)<sup>۲</sup>−۱<sup>۲</sup>) = ۲(√۵+۱)/۴</div>
+        </div>
+        <div class="result">نتیجه: (√۵+۱)/۲</div>
+      </div>
+    </div>
+
+    <div class="card mistake">
+      <span class="card-label">اشتباهات پرتکرار</span>
+      <ul>
+        <li>فرمول a<sup>۲</sup>−b<sup>۲</sup> برای تفاضل دو مربع است، نه مجموع دو مربع — a<sup>۲</sup>+b<sup>۲</sup> اصلاً فاکتور نمی‌شود (با اعداد حقیقی).</li>
+        <li>در (a+b)/c، به‌اشتباه ننویس c/a + c/b؛ تجزیهٔ کسر فقط وقتی صورت جمع باشد، معتبر است: (a+b)/c = a/c + b/c، نه برعکس.</li>
+        <li>در Rational Expression هیچ‌وقت مخرج نباید صفر شود — همیشه شرط مخرج را چک کن.</li>
+        <li>در گویاسازی با مزدوج، فراموش نکن علامت وسط باید برعکس شود.</li>
+      </ul>
+    </div>
+
+    <div class="card examtip">
+      <span class="card-label">نکات امتحانی</span>
+      <ul>
+        <li>قبل از فاکتورگیری، همیشه اول دنبال عامل مشترک بین همهٔ جمله‌ها بگرد.</li>
+        <li>اگر توان‌ها هم زوج بودند و هم مضرب ۳ (مثل توان ۶)، اول از مزدوج استفاده کن، بعد از چاق‌ولاغر روی هرکدام از پرانتزها.</li>
+        <li>در گویاسازی، شکل مخرج (یک‌جمله‌ای، رادیکال با فرجهٔ بالاتر، یا دوجمله‌ای با رادیکال) روش را تعیین می‌کند.</li>
+      </ul>
+    </div>
+
+    <div class="card practice">
+      <span class="card-label">تمرین این بخش</span>
+      <div class="qitem">
+        <b class="qnum">۱</b>عبارت ۴x<sup>۲</sup> − ۲۵ را تجزیه کن.
+        <details><summary>نمایش پاسخ</summary>
+          <div class="answer">
+            <div class="line">۴x<sup>۲</sup> = (۲x)<sup>۲</sup> و ۲۵=۵<sup>۲</sup></div>
+            <div class="line">این تفاضل دو مربع است.</div>
+            <div class="line final">پاسخ نهایی: (۲x−۵)(۲x+۵)</div>
+          </div>
+        </details>
+      </div>
+      <div class="qitem">
+        <b class="qnum">۲</b>عبارت (x−۴)<sup>۲</sup> را باز کن.
+        <details><summary>نمایش پاسخ</summary>
+          <div class="answer">
+            <div class="line">از فرمول (a−b)<sup>۲</sup>=a<sup>۲</sup>−۲ab+b<sup>۲</sup> استفاده می‌کنیم؛ a=x و b=۴</div>
+            <div class="line">x<sup>۲</sup> − ۲(x)(۴) + ۴<sup>۲</sup></div>
+            <div class="line final">پاسخ نهایی: x<sup>۲</sup> − ۸x + ۱۶</div>
+          </div>
+        </details>
+      </div>
+      <div class="qitem">
+        <b class="qnum">۳</b>مخرج کسر ۵/(√۳) را گویا کن.
+        <details><summary>نمایش پاسخ</summary>
+          <div class="answer">
+            <div class="line">صورت و مخرج را در √۳ ضرب می‌کنیم.</div>
+            <div class="line">(۵×√۳) / (√۳×√۳) = ۵√۳/۳</div>
+            <div class="line final">پاسخ نهایی: ۵√۳ / ۳</div>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+
   <!-- ===================== CLOSING ===================== -->
   <section class="closing" id="summary">
     <div class="closing-inner">
@@ -2018,28 +2062,19 @@
         <span>اعشار و نمایش علمی</span>
         <span>مقایسه و تخمین</span>
         <span>عوامل و مضرب‌ها</span>
-        <span>HCF / LCM</span>
+        <span>بخش‌پذیری</span>
+        <span>درصد</span>
         <span>۷ قانون توان</span>
         <span>رادیکال‌ها</span>
-        <span>درصد</span>
         <span>BODMAS</span>
         <span>جملات هم‌نوع</span>
         <span>اتحادها</span>
-        <span>بخش‌پذیری</span>
       </div>
       <p>
-        از شناخت ماهیت اعداد (بخش ۱) شروع کردی، منطق مقایسه و تجزیه رو (بخش‌های ۲ و ۳) درک کردی، بر توان‌ها و
-        رادیکال‌ها مسلط شدی (بخش‌های ۴ و ۵)، تغییرات درصدی رو سنجیدی (بخش ۶)، و در نهایت یاد گرفتی چگونه
-        پیچیده‌ترین عبارت‌ها رو با قوانین جبری ساده کنی (بخش‌های ۷ تا ۹).
+        از شناخت ماهیت اعداد (بخش ۱) شروع کردی، منطق مقایسه و تجزیه را (بخش‌های ۲ و ۳) درک کردی، بر توان‌ها و
+        رادیکال‌ها مسلط شدی (بخش‌های ۴ و ۵)، تغییرات درصدی را سنجیدی (بخش ۶)، و در نهایت یاد گرفتی چگونه
+        پیچیده‌ترین عبارت‌ها را با قوانین جبری ساده کنی (بخش‌های ۷ تا ۹).
       </p>
       <div class="compass">
-        🧭 ریاضیات حفظ‌کردن فرمول نیست؛ بلکه توانایی ترکیب این ابزارها برای حل مسائل جدید هست.
-        این جزوه رو به‌عنوان مرجع همیشگی خودت نگه دار — یادگیری‌ات به پایان نرسیده، تازه آغاز شده.
-      </div>
-    </div>
-  </section>
-
-  <footer>ساخته‌شده برای مسیر یادگیری شخصی‌ات — موفق باشی 🌱</footer>
-</div>
-</body>
-</html>
+        🧭 ریاضیات حفظ‌کردن فرمول نیست؛ بلکه توانایی ترکیب این ابزارها برای حل مسائل جدید است.
+        این جزوه را به‌عنوان مرجع همیشگی خودت نگه دار — یادگیری‌ات به پایان نرسیده، تازه 
